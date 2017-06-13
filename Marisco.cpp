@@ -1,5 +1,7 @@
 #include "Mariscos.h"
 
+using namespace std;
+
 Mariscos :: Mariscos() {
 
 }

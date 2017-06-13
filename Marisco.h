@@ -6,7 +6,7 @@
 using namespace std;
 
 class Mariscos{
-	protected:
+	protected:	
 		string name;
 		double precio;
 		double peso;
