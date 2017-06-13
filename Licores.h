@@ -1,21 +1,19 @@
 #include <string>
 
-#ifndef JUGUETERIA_H
-#define JUGUETERIA_H
-
 using namespace std;
 
-class Jugueteria {
+#ifndef LICORES_H
+#define LICORES_H 
+
+class Licores {
 	protected:
 		string name;
 		string marca;
 		double precio;
-		string tipo;
+		int cantidad;
 
 	public:
-		Jugueteria();
-		Jugueteria(string, string, double, string);
-		//Metodos get/set nombre
+		//metodos get/set nombre
 		string getName();
 		void setName(string);
 		//Metodos get/set precio
@@ -25,8 +23,9 @@ class Jugueteria {
 		double getPrecio();
 		void setPrecio(double);
 		//Metodos get/set tipo juguete
-		string getTipo();
-		void setTipo(string);
+		int getCantidad();
+		void setCantidad(int);
+	
 };
 
 #endif
