@@ -10,9 +10,11 @@ class Licores {
 		string name;
 		string marca;
 		double precio;
-		int cantidad;
+		int cantidadML;
 
 	public:
+		Licores();
+		Licores(string, string, double, int);
 		//metodos get/set nombre
 		string getName();
 		void setName(string);
@@ -23,8 +25,8 @@ class Licores {
 		double getPrecio();
 		void setPrecio(double);
 		//Metodos get/set tipo juguete
-		int getCantidad();
-		void setCantidad(int);
+		int getCantidadML();
+		void setCantidadML(int);
 	
 };
 
