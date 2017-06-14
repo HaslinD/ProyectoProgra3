@@ -38,6 +38,5 @@ Pan.o: Pan.h Pan.cpp
 Verduras.o: Verduras.h Verduras.cpp
 	g++ -c Verduras.cpp
 
->>>>>>> 6c221ab36ec33aa17496389e6a3b8db40e8de3b9
 clean:
 	rm -f *.o Main
