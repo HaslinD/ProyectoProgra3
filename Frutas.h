@@ -10,6 +10,7 @@ class Frutas{
 	protected:
 		double precio;
 		string tipo;
+		
 	public:
 		Frutas(double,string);
 		Frutas();

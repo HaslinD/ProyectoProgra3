@@ -10,6 +10,7 @@ class Heladeria{
 	protected:
 		double precio;
 		string tipo;
+		
 	public:
 		Heladeria(double,string);
 		Heladeria();
