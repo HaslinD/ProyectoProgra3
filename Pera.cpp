@@ -2,14 +2,14 @@
 
 using namespace std;
 
-Cerdo :: Cerdo (int codigo, double precio, string tipo) : Frutas(precio, tipo) {
+Cerdo :: Cerdo (string codigo, double precio, string tipo) : Frutas(precio, tipo) {
 	this -> codigo = codigo;
 }
 
-int getCodigo() {
+string getCodigo() {
 	return codigo;
 }
 
-void setCodigo(int codigo) {
+void setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

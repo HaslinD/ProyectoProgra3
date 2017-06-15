@@ -1,8 +1,8 @@
-#include "Manzana.h"
+#include "Pepino.h"
 
 using namespace std;
 
-Manzana :: Manzana (string codigo, double precio, string tipo) : Frutas(precio, tipo) {
+Pepino :: Pepino (string codigo, string name, double precioVerdura, int cantidad) : Verduras(name, precioVerdura, cantidad) {
 	this -> codigo = codigo;
 }
 

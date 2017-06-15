@@ -1,18 +1,18 @@
 #include <string>
-#include "Heladeria.h"
+#include "Verduras.h"
 
 using namespace std;
 
-#ifndef CONO_H
-#define CONO_H
+#ifndef TOMATE_H
+#define TOMATE_H
 
 
-class Cono : public Heladeria{
+class Tomate : public Verduras{
 	private:
 		string codigo;
 
 	public:
-		Cono(string, double, string);
+		Tomate(string, string, double, int);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

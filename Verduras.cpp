@@ -6,9 +6,8 @@ Verduras :: Verduras() {
 
 }
 
-Verduras :: Verduras(string name, string frescura, double precioVerdura, int cantidad) {
+Verduras :: Verduras(string name, double precioVerdura, int cantidad) {
 	this -> name = name;
-	this -> frescura = frescura;
 	this -> precioVerdura = precioVerdura;
 	this -> cantidad = cantidad;
 }
@@ -19,14 +18,6 @@ string Verduras :: getName() {
 
 void Verduras :: setName(string name) {
 	this -> name = name;
-}
-
-string Verduras :: getFrescura() {
-	return frescura;
-}
-
-void Verduras :: setFrescura(string frescura) {
-	this -> frescura = frescura;
 }
 
 double Verduras :: getPrecioverdura() {

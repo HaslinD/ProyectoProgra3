@@ -8,13 +8,13 @@ using namespace std;
 
 class Pepsi : public Bebidas{
 	private:
-		int codigo;
+		string codigo;
 
 	public:
-		Pepsi(int, double, string);
+		Pepsi(string, double, string);
 		//get/set codigo
-		int getCodigo();
-		void setCodigo(int);
+		string getCodigo();
+		void setCodigo(string);
 
 };
 #endif

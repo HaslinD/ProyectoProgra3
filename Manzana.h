@@ -9,13 +9,13 @@ using namespace std;
 
 class Manzana : public Frutas{
 	private:
-		int codigo;
+		string codigo;
 
 	public:
-		Manzana(int, double, string);
+		Manzana(string, double, string);
 		//get/set codigo
-		int getCodigo();
-		void setCodigo(int);
+		string getCodigo();
+		void setCodigo(string);
 
 };
 #endif

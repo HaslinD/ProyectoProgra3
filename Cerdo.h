@@ -9,13 +9,13 @@ using namespace std;
 
 class Cerdo : public Carnes{
 	private:
-		int codigo;
+		string codigo;
 
 	public:
-		Cerdo(int, double, string);
+		Cerdo(string, double, string);
 		//get/set codigo
-		int getCodigo();
-		void setCodigo(int);
+		string getCodigo();
+		void setCodigo(string);
 
 };
 #endif

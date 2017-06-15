@@ -1,18 +1,18 @@
 #include <string>
-#include "Heladeria.h"
+#include "Mariscos.h"
 
 using namespace std;
 
-#ifndef CONO_H
-#define CONO_H
+#ifndef PEZ_H
+#define PEZ_H
 
 
-class Cono : public Heladeria{
+class Pez : public Mariscos{
 	private:
 		string codigo;
 
 	public:
-		Cono(string, double, string);
+		Pez(string, string, double, double);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

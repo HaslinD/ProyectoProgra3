@@ -8,13 +8,13 @@ using namespace std;
 
 class Pera : public Frutas{
 	private:
-		int codigo;
+		string codigo;
 
 	public:
-		Pera(int, double, string);
+		Pera(string, double, string);
 		//get/set codigo
-		int getCodigo();
-		void setCodigo(int);
+		string getCodigo();
+		void setCodigo(string);
 
 };
 #endif
