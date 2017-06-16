@@ -6,10 +6,10 @@ Pepino :: Pepino (string codigo, string name, double precioVerdura, int cantidad
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Pepino :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Pepino :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

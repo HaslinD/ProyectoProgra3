@@ -6,10 +6,10 @@ Martillo :: Martillo (string codigo, string sabor, double precio) : Herraminenta
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Martillo :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Martillo :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

@@ -6,10 +6,10 @@ Ron :: Ron (string codigo, string name, string marca, double precio, int cantida
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Ron :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Ron :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

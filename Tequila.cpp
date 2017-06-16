@@ -6,10 +6,10 @@ Tequila :: Tequila (string codigo, string name, string marca, double precio, int
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Tequila :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Tequila :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

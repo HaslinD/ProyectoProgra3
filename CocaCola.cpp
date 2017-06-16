@@ -6,10 +6,10 @@ CocaCola :: CocaCola (string codigo, double precio, string sabor) : Bebidas(prec
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string CocaCola :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void CocaCola :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

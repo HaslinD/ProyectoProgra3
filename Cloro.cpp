@@ -6,10 +6,10 @@ Cloro :: Cloro (string codigo, double precio, string tipo) : Limpieza(precio, ti
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Cloro :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Cloro :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

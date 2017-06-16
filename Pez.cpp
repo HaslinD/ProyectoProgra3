@@ -6,10 +6,10 @@ Pez :: Pez (string codigo, string name, double precio, double peso) : Mariscos(n
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Pez :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Pez :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

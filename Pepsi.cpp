@@ -6,10 +6,10 @@ Pepsi :: Pepsi (string codigo, double precio, string sabor) : Bebidas(precio, sa
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Pepsi :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Pepsi :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

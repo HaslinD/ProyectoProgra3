@@ -1,15 +1,15 @@
-#include "Cerdo.h"
+#include "Pera.h"
 
 using namespace std;
 
-Cerdo :: Cerdo (string codigo, double precio, string tipo) : Frutas(precio, tipo) {
+Pera :: Pera (string codigo, double precio, string tipo) : Frutas(precio, tipo) {
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Pera :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Pera :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

@@ -7,10 +7,10 @@ Tomate :: Tomate (string codigo, string name, double precioVerdura, int cantidad
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Tomate :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Tomate :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

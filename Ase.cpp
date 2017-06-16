@@ -6,10 +6,10 @@ Ase :: Ase (string codigo, double precio, string tipo) : Limpieza(precio, tipo) 
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Ase :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Ase :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

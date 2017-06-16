@@ -6,10 +6,10 @@ Semita :: Semita (string codigo, string name, string estado, double precio, stri
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Semita :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Semita :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

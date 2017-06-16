@@ -6,10 +6,10 @@ Lego :: Lego (string codigo, string name, string marca, double precio, string ti
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Lego :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Lego :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

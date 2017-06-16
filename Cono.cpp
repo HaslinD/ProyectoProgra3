@@ -6,10 +6,10 @@ Cono :: Cono (string codigo, double precio, string tipo) : Heladeria(precio, tip
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Cono :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Cono :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

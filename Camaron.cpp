@@ -6,10 +6,10 @@ Camaron :: Camaron (string codigo, string name, double precio, double peso) : Ma
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Camaron :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Camaron :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

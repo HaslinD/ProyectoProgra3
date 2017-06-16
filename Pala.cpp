@@ -6,10 +6,10 @@ Pala :: Pala (string codigo, string tipo, double precio) : Herramientas(tipo, pr
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Pala :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Pala :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

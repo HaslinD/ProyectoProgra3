@@ -6,10 +6,10 @@ Res :: Res (string codigo, double precio, string tipo) : Carnes(precio, tipo) {
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Res :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Res :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

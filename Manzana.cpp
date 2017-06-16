@@ -6,10 +6,10 @@ Manzana :: Manzana (string codigo, double precio, string tipo) : Frutas(precio, 
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Manzana :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Manzana :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

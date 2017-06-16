@@ -6,10 +6,10 @@ Galletas :: Galletas (string codigo, string name, string estado, double precio, 
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Galletas :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Galletas :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

@@ -6,10 +6,10 @@ Puzzle :: Puzzle (string codigo, string name, string marca, double precio, strin
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Puzzle :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Puzzle :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }

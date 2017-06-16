@@ -6,10 +6,10 @@ Sundae :: Sundae (string codigo, double precio, string tipo) : Heladeria(precio,
 	this -> codigo = codigo;
 }
 
-string getCodigo() {
+string Sundae :: getCodigo() {
 	return codigo;
 }
 
-void setCodigo(string codigo) {
+void Sundae :: setCodigo(string codigo) {
 	this -> codigo = codigo;
 }
