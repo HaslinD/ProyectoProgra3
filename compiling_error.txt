@@ -1,0 +1,6 @@
+/tmp/ccRLTEVm.o: En la función `main':
+Main.cpp:(.text+0x8c): referencia a `Usuario::Usuario(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)' sin definir
+Main.cpp:(.text+0xd8): referencia a `Sistema::Sistema()' sin definir
+Main.cpp:(.text+0xe7): referencia a `Sistema::getUsuarios()' sin definir
+Main.cpp:(.text+0x10b): referencia a `Sistema::run()' sin definir
+collect2: error: ld returned 1 exit status

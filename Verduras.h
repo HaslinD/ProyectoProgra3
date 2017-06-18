@@ -10,11 +10,11 @@ class Verduras {
 		string name;
 		string frescura;
 		double precioVerdura;
-		int cantidad
+		int cantidad;
 
 	public:
 		Verduras();
-		Verduras(string, frescura, double, int);
+		Verduras(string, string, double, int);
 		//Metodos get/set nombre
 		string getName();
 		void setName(string);
