@@ -15,13 +15,11 @@ class Verduras {
 	public:
 		Verduras();
 		Verduras(string, string, double, int);
+		Verduras(string, double, int);
 		//Metodos get/set nombre
 		string getName();
 		void setName(string);
-		//Metodos get/set precio
-		string getFrescura();
-		void setFrescura(string);
-		//Metodos get/set Frescura
+		//Metodos get/set precio por verdura
 		double getPrecioverdura();
 		void setPrecioverdura(double);
 		//Metodos get/set tipo juguete

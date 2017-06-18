@@ -11,7 +11,7 @@ class Limpieza{
 		double precio;
 		string tipo;
 	public:
-		Limpieza(double);
+		Limpieza(double, string);
 		Limpieza();
 		double getPrecio();
 		void setPrecio(double);

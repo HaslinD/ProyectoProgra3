@@ -1,11 +1,13 @@
 #include "Limpieza.h"
 
-Limpieza::Limpieza(double precio){
+Limpieza::Limpieza(double precio, string tipo){
 	this->precio=precio;
+	this -> tipo = tipo;
 }
 Limpieza::Limpieza(){
 
-}void Limpieza::setPrecio(double precio){
+}
+void Limpieza::setPrecio(double precio){
    this-> precio=precio;
 }
 double Limpieza::getPrecio(){
