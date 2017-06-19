@@ -1,0 +1,4 @@
+/home/josuezguevara/Progra3/ProyectoProgra3/Sistema.cpp: In member function ‘void Sistema::run()’:
+/home/josuezguevara/Progra3/ProyectoProgra3/Sistema.cpp:223:7: error: ‘salir’ was not declared in this scope
+       salir=true;
+       ^

@@ -14,6 +14,7 @@ class Verduras {
 
 	public:
 		Verduras();
+		Verduras(string, string, double, int);
 		Verduras(string, double, int);
 		//Metodos get/set nombre
 		string getName();
