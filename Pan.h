@@ -14,6 +14,8 @@ class Pan {
 		string fechaVencimiento;
 
 	public:
+		Pan();
+		Pan(string, string, double, string, string);
 		//Metodos get/set nombre
 		string getName();
 		void setName(string);
