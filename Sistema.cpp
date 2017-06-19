@@ -34,8 +34,8 @@ void Sistema::run(){
   initscr();
   start_color();
 	echo();
-  Usuario* user=new Administrador("122","123","Haziel");
-  usuarios.push_back(user);
+  /*Usuario* user=new Administrador("122","123","Haziel");
+  usuarios.push_back(user);*/
   bool libre=false;
   archivo1.open("Usuario.txt",ios::app);
   while(!libre){
@@ -140,7 +140,7 @@ void Sistema::run(){
           } //fin Administrador login
 
 
-            break;
+          break;
         }else{
           cleanScreen();
           mvprintw(5, 10, "Usuario y Contraseña Incorrectos");
