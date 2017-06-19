@@ -4,18 +4,20 @@
 using namespace std;
 
 #ifndef ADMINISTRADOR_H
-#define ADMINISTRADOR_H 
+#define ADMINISTRADOR_H
 
 class Administrador : public Usuario {
 	private:
-		int id;
+		string id;
 
 	public:
 		Administrador();
-		Administrador(int, string, string);
+		Administrador(string, string, string);
 
-		int getID();
-		void setID(int);
+		string getID();
+		void setID(string);
+
+		virtual void metodo();
 
 };
 #endif

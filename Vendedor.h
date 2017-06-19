@@ -4,22 +4,24 @@
 using namespace std;
 
 #ifndef VENDEDOR_H
-#define VENDEDOR_H 
+#define VENDEDOR_H
 
 class Vendedor : public Usuario{
 	private:
-		int id;
+		string id;
 		string puesto;
 
 	public:
 		Vendedor();
-		Vendedor(int, string, string, string);
+		Vendedor(string, string, string, string);
 
-		int getID();
-		void setID(int);
+		string getID();
+		void setID(string);
 
 		string getPuesto();
 		void setPuesto(string);
+
+		virtual void metodo();
 
 };
 #endif

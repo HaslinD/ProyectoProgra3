@@ -6,16 +6,16 @@ Vendedor :: Vendedor () {
 
 }
 
-Vendedor :: Vendedor (int id, string puesto, string password, string user) : Usuario(password, user) {
+Vendedor :: Vendedor (string id, string puesto, string password, string user) : Usuario(password, user) {
 	this -> id = id;
 	this -> puesto = puesto;
 }
 
-int Vendedor :: getID() {
+string Vendedor :: getID() {
 	return id;
 }
 
-void Vendedor :: setID(int id) {
+void Vendedor :: setID(string id) {
 	this -> id = id;
 }
 
@@ -25,4 +25,8 @@ string Vendedor :: getPuesto() {
 
 void Vendedor :: setPuesto(string puesto) {
 	this -> puesto = puesto;
+}
+
+void Vendedor::metodo(){
+	
 }

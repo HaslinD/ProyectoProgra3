@@ -18,3 +18,7 @@ void Usuario::setUser(string user){
 string Usuario::getUser(){
    return user;
 }
+
+void Usuario::metodo(){
+	
+}

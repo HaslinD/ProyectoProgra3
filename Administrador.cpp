@@ -6,14 +6,18 @@ Administrador :: Administrador () {
 
 }
 
-Administrador :: Administrador (int id, string password, string user) : Usuario(password, user) {
+Administrador :: Administrador (string id, string password, string user) : Usuario(password, user) {
 	this -> id = id;
 }
 
-int Administrador :: getID() {
+string Administrador :: getID() {
 	return id;
 }
 
-void Administrador :: setID(int id) {
+void Administrador :: setID(string id) {
 	this -> id = id;
+}
+
+void Administrador::metodo(){
+	
 }
