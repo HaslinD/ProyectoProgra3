@@ -181,7 +181,7 @@ void Sistema::run(){
                   }else{
                     cleanScreen();
                     mvprintw(5,20,"Opcion no valida, intente de nuevo...");
-                    getch();
+                  getch();
                   }
 
                   cleanScreen();
