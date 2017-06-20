@@ -4,6 +4,9 @@
 
 using namespace std;
 
+#ifndef PEDIDO_H
+#define PEDIDO_H
+
 class Pedido : public Factura{
 	private:
 		string descripcion;
@@ -29,3 +32,4 @@ class Pedido : public Factura{
 		string Domicili();
 
 };
+#endif
