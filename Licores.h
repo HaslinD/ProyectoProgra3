@@ -1,4 +1,5 @@
 #include <string>
+#include "Productos.h"
 
 using namespace std;
 

@@ -1,5 +1,5 @@
 #include <string>
-#include "Producto.h"
+#include "Productos.h"
 
 #ifndef JUGUETERIA_H
 #define JUGUETERIA_H
