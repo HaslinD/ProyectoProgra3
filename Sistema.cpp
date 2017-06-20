@@ -25,14 +25,6 @@ Sistema::Sistema(){
 }
 
 
-/*void Sistema::setUsuarios(Usuario* user){
-   this-> usuarios.push_back(user);
-}
-vector<Usuario*>& Sistema::getUsuarios(){
-   return usuarios;
-}*/
-
-
 void Sistema::run(){
   initscr();
   start_color();
@@ -207,23 +199,23 @@ void Sistema::run(){
                     char cod[9];
                     getstr(cod);
                     string codigo = static_cast<char*>(cod);
-                    //Bebidas* bebi=new Pepsi("111","222","Pepsi");
-                    Productos* bedi=new Pepsi(codigo,precio,"CocaCola");
+                    Productos* bedi=new CocaCola(codigo,precio,"CocaCola");
                     productos.push_back(bedi);
                     mvprintw(6,20,"Se ha agregado correctamente: ");
-                    //TODO: falta en archivos y agregarlo en vector
                   }
                   else if (op[0]=='2'){//pepsi
                     cleanScreen();
-                    mvprintw(6,20,"Ingrese precio: ");
+                    mvprintw(6,20,"Ingrese Precio: ");
                     char price[9];
                     getstr(price);
                     string precio = static_cast<char*>(price);
-                    mvprintw(7,20,"Ingrese codigo: ");
+                    mvprintw(7,20,"Ingrese Código: ");
                     char cod[9];
                     getstr(cod);
                     string codigo = static_cast<char*>(cod);
-                    //TODO: falta en archivos y agregarlo en vector
+                    Productos* bedi=new Pepsi(codigo,precio,"Pepsi");
+                    productos.push_back(bedi);
+                    mvprintw(6,20,"Se ha agregado correctamente: ");
                   }
                   else if (op[0]=='3'){//salir
                     cleanScreen();
@@ -240,6 +232,55 @@ void Sistema::run(){
               }
               else if (res=="2"){//carnes
                 cleanScreen();
+                bool libre=false;
+                while(!libre){
+                  mvprintw(5,20,"Cual desea agregar: ");
+                  mvprintw(6,20,"[1]. Cerdo");
+                  mvprintw(7,20,"[2]. Res");
+                  mvprintw(8,20,"[3]. Salir");
+                  mvprintw(9,20,"Ingrese Opcion: ");
+                  char op[1];
+                  getstr(op);
+                  if (op[0]=='1'){//Cerdo
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    Productos* carne=new Cerdo(codigo,precio,"Cerdo");
+                    productos.push_back(carne);
+                    mvprintw(6,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='2'){//res
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese Precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese Código: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    Productos* carne=new Res(codigo,precio,"Res");
+                    productos.push_back(carne);
+                    mvprintw(6,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='3'){//salir
+                    cleanScreen();
+                    libre=true;
+                  }else{
+                    cleanScreen();
+                    mvprintw(5,20,"Opcion no valida, intente de nuevo...");
+                    getch();
+                  }
+                  cleanScreen();
+                }
+
+                getch();
               }
               else if (res=="3"){//frutas
 
