@@ -283,9 +283,109 @@ void Sistema::run(){
                 getch();
               }
               else if (res=="3"){//frutas
+                cleanScreen();
+                bool libre=false;
+                while(!libre){
+                  mvprintw(5,20,"Cual desea agregar: ");
+                  mvprintw(6,20,"[1]. Pera");
+                  mvprintw(7,20,"[2]. Manzana");
+                  mvprintw(8,20,"[3]. Salir");
+                  mvprintw(9,20,"Ingrese Opcion: ");
+                  char op[1];
+                  getstr(op);
+                  if (op[0]=='1'){//pera
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    Productos* fruta=new Pera(codigo,precio,"Pera");
+                    productos.push_back(fruta);
+                    mvprintw(6,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='2'){//manzana
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese Precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese Código: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    Productos* fruta=new Manzana(codigo,precio,"Manzana");
+                    productos.push_back(fruta);
+                    mvprintw(6,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='3'){//salir
+                    cleanScreen();
+                    libre=true;
+                  }else{
+                    cleanScreen();
+                    mvprintw(5,20,"Opcion no valida, intente de nuevo...");
+                    getch();
+                  }
+                  cleanScreen();
+                }
+
+                getch();
 
               }
               else if (res=="4"){//Heladeria
+                cleanScreen();
+                bool libre=false;
+                while(!libre){
+                  mvprintw(5,20,"Cual desea agregar: ");
+                  mvprintw(6,20,"[1]. Cono");
+                  mvprintw(7,20,"[2]. Sundae");
+                  mvprintw(8,20,"[3]. Salir");
+                  mvprintw(9,20,"Ingrese Opcion: ");
+                  char op[1];
+                  getstr(op);
+                  if (op[0]=='1'){//cono
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    Productos* helado=new Pera(codigo,precio,"Cono");
+                    productos.push_back(helado);
+                    mvprintw(6,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='2'){//Sundae
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese Precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese Código: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    Productos* fruta=new Manzana(codigo,precio,"Sundae");
+                    productos.push_back(fruta);
+                    mvprintw(6,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='3'){//salir
+                    cleanScreen();
+                    libre=true;
+                  }else{
+                    cleanScreen();
+                    mvprintw(5,20,"Opcion no valida, intente de nuevo...");
+                    getch();
+                  }
+                  cleanScreen();
+                }
+
+                getch();
 
               }
               else if(res=="5"){//Herramientas
