@@ -6,7 +6,7 @@ Mariscos :: Mariscos() {
 
 }
 
-Mariscos :: Mariscos(string name, double precio, double peso) {
+Mariscos :: Mariscos(string name, string precio, string peso) :Productos(){
 	this -> name = name;
 	this -> precio = precio;
 	this -> peso = peso;
@@ -20,18 +20,18 @@ void Mariscos :: setName(string name) {
 	this -> name = name;
 }
 
-double Mariscos :: getPrecio() {
+string Mariscos :: getPrecio() {
 	return precio;
 }
 
-void Mariscos :: setPrecio(double precio) {
+void Mariscos :: setPrecio(string precio) {
 	this -> precio = precio;
 }
 
-double Mariscos :: getPeso() {
+string Mariscos :: getPeso() {
 	return peso;
 }
 
-void Mariscos :: setPeso(double peso) {
+void Mariscos :: setPeso(string peso) {
 	this -> peso = peso;
 }

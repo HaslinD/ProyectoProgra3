@@ -1,6 +1,6 @@
 #include "Herramientas.h"
 
-Herramientas::Herramientas(string tipo,double precio){
+Herramientas::Herramientas(string tipo,string precio):Productos(){
 	this->tipo=tipo;
 	this->precio=precio;
 }
@@ -12,9 +12,9 @@ Herramientas::Herramientas(){
 string Herramientas::getTipo(){
    return tipo;
 }
-void Herramientas::setPrecio(double precio){
+void Herramientas::setPrecio(string precio){
    this-> precio=precio;
 }
-double Herramientas::getPrecio(){
+string Herramientas::getPrecio(){
    return precio;
 }

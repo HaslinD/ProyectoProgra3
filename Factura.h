@@ -9,21 +9,20 @@ class Factura {
 	protected:
 		string lugar;
 		string fecha;
-		int numerolocal;
+		string numerolocal;
 		string NomApe;
-		int numIdenti;
+		string numIdenti;
 		string domicilio;
 
 	public:
 		Factura();
-		Factura(string, string, int, string, int, string);
+		Factura(string, string, string, string, string, string);
 
-		virtual void Lugar(string) = 0;
-		virtual void Fecha(string) = 0;
-		virtual void Numlocal(int) = 0;
-		virtual void Nombreapellido(string) = 0;
-		virtual void Numidentificacion(int) = 0;
-		virtual void Domicilio(string) = 0;
-
+		virtual string Lugar() = 0;
+		virtual string Fecha() = 0;
+		virtual string Numlocal() = 0;
+		virtual string Nombreapellido() = 0;
+		virtual string Numidentificacion() = 0;
+		virtual string Domicilio() = 0;
 };
 #endif

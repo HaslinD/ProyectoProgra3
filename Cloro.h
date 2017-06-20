@@ -12,7 +12,7 @@ class Cloro : public Limpieza{
 		string codigo;
 
 	public:
-		Cloro(string, double, string);
+		Cloro(string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

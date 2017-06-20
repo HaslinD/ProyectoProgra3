@@ -6,24 +6,24 @@
 
 using namespace std;
 
-class Mariscos{
-	protected:	
+class Mariscos:public Productos{
+	protected:
 		string name;
-		double precio;
-		double peso;
+		string precio;
+		string peso;
 
 	private:
 		Mariscos();
-		Mariscos(string, double, double);
+		Mariscos(string, string, string);
 		//set y get de nombre
 		string getName();
 		void setName(string);
-		//set y get de precio 
-		double getPrecio();
-		void setPrecio(double);
+		//set y get de precio
+		string getPrecio();
+		void setPrecio(string);
 		//set y get de cantidad
-		double getPeso();
-		void setPeso(double);
+		string getPeso();
+		void setPeso(string);
 };
 
 

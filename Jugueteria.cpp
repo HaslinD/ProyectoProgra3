@@ -6,7 +6,7 @@ Jugueteria :: Jugueteria() {
 
 }
 
-Jugueteria :: Jugueteria(string name, string marca, double precio, string tipo) {
+Jugueteria :: Jugueteria(string name, string marca, string precio, string tipo) : Productos(){
 	this -> name = name;
 	this -> marca = marca;
 	this -> precio = precio;
@@ -29,11 +29,11 @@ void Jugueteria :: setMarca(string marca) {
 	this -> marca = marca;
 }
 
-double Jugueteria :: getPrecio() {
+string Jugueteria :: getPrecio() {
 	return precio;
 }
 
-void Jugueteria :: setPrecio(double precio) {
+void Jugueteria :: setPrecio(string precio) {
 	this -> precio = precio;
 }
 

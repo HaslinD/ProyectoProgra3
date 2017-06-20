@@ -12,7 +12,7 @@ class Cono : public Heladeria{
 		string codigo;
 
 	public:
-		Cono(string, double, string);
+		Cono(string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

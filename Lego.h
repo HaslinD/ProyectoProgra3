@@ -12,7 +12,7 @@ class Lego : public Jugueteria{
 		string codigo;
 
 	public:
-		Lego(string, string, string, double, string);
+		Lego(string, string, string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

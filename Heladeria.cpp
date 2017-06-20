@@ -1,15 +1,15 @@
 #include "Heladeria.h"
 
-Heladeria::Heladeria(double precio,string tipo){
+Heladeria::Heladeria(string precio,string tipo):Productos(){
 	this->precio=precio;
 	this->tipo=tipo;
 }
 Heladeria::Heladeria(){
 
-}void Heladeria::setPrecio(double precio){
+}void Heladeria::setPrecio(string precio){
    this-> precio=precio;
 }
-double Heladeria::getPrecio(){
+string Heladeria::getPrecio(){
    return precio;
 }
 void Heladeria::setTipo(string tipo){

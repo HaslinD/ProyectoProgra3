@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Sundae :: Sundae (string codigo, double precio, string tipo) : Heladeria(precio, tipo) {
+Sundae :: Sundae (string codigo, string precio, string tipo) : Heladeria(precio, tipo) {
 	this -> codigo = codigo;
 }
 

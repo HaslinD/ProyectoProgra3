@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Pala :: Pala (string codigo, string tipo, double precio) : Herramientas(tipo, precio) {
+Pala :: Pala (string codigo, string tipo, string precio) : Herramientas(tipo, precio) {
 	this -> codigo = codigo;
 }
 

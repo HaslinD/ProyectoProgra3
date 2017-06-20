@@ -7,16 +7,16 @@ using namespace std;
 
 #ifndef CARNES_H
 #define CARNES_H
-class Carnes{
+class Carnes : public Productos{
 	protected:
-		double precio;
+		string precio;
 		string tipo;
-		
+
 	public:
-		Carnes(double,string);
+		Carnes(string,string);
 		Carnes();
-		double getPrecio();
-		void setPrecio(double);
+		string getPrecio();
+		void setPrecio(string);
 
 		string getTipo();
 		void setTipo(string);

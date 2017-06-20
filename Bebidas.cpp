@@ -1,15 +1,15 @@
 #include "Bebidas.h"
 
-Bebidas::Bebidas(double precio,string sabor){
+Bebidas::Bebidas(string precio,string sabor):Productos(){
 	this->precio=precio;
 	this->sabor=sabor;
 }
 Bebidas::Bebidas(){
 
-}void Bebidas::setPrecio(double precio){
+}void Bebidas::setPrecio(string precio){
    this-> precio=precio;
 }
-double Bebidas::getPrecio(){
+string Bebidas::getPrecio(){
    return precio;
 }
 void Bebidas::setSabor(string sabor){

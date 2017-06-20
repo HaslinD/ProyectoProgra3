@@ -1,3 +1,4 @@
+#include "Productos.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -7,15 +8,15 @@ using namespace std;
 
 #ifndef BEBIDAS_H
 #define BEBIDAS_H
-class Bebidas{
+class Bebidas:public Productos{
 	protected:
-		double precio;
+		string precio;
 		string sabor;
 	public:
-		Bebidas(double,string);
+		Bebidas(string,string);
 		Bebidas();
-		double getPrecio();
-		void setPrecio(double);
+		string getPrecio();
+		void setPrecio(string);
 
 		string getSabor();
 		void setSabor(string);

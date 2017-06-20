@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Ase :: Ase (string codigo, double precio, string tipo) : Limpieza(precio, tipo) {
+Ase :: Ase (string codigo, string precio, string tipo) : Limpieza(precio, tipo) {
 	this -> codigo = codigo;
 }
 

@@ -12,7 +12,7 @@ class Galletas : public Pan{
 		string codigo;
 
 	public:
-		Galletas(string, string, string, double, string, string);
+		Galletas(string, string, string, string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

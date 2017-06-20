@@ -11,7 +11,7 @@ class Pedido : public Factura{
 
 	public:
 		Pedido();
-		Pedido(string, string, string, int, string, int, string);
+		Pedido(string, string, string, string, string, string, string);
 
 		string getDescripcion();
 		void setDescripcion(string);
@@ -21,11 +21,11 @@ class Pedido : public Factura{
 
 		void setObjects(string obj);
 
-		string Lugar(string);
-		string Fecha(string);
-		int NumLocal(int);
-		string Nombreapellido(string);
-		int Numidentificacion(int);
-		string Domicili(string);
+		string Lugar();
+		string Fecha();
+		string NumLocal();
+		string Nombreapellido();
+		string Numidentificacion();
+		string Domicili();
 
 };

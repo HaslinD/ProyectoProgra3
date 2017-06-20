@@ -12,7 +12,7 @@ class Sundae : public Heladeria{
 		string codigo;
 
 	public:
-		Sundae(string, double, string);
+		Sundae(string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

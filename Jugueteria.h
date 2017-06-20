@@ -6,16 +6,16 @@
 
 using namespace std;
 
-class Jugueteria {
+class Jugueteria : public Jugueteria{
 	protected:
 		string name;
 		string marca;
-		double precio;
+		string precio;
 		string tipo;
 
 	public:
 		Jugueteria();
-		Jugueteria(string, string, double, string);
+		Jugueteria(string, string, string, string);
 		//Metodos get/set nombre
 		string getName();
 		void setName(string);
@@ -23,8 +23,8 @@ class Jugueteria {
 		string getMarca();
 		void setMarca(string);
 		//Metodos get/set marca
-		double getPrecio();
-		void setPrecio(double);
+		string getPrecio();
+		void setPrecio(string);
 		//Metodos get/set tipo juguete
 		string getTipo();
 		void setTipo(string);

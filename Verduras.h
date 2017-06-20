@@ -10,22 +10,22 @@ class Verduras {
 	protected:
 		string name;
 		string frescura;
-		double precioVerdura;
-		int cantidad;
+		string precioVerdura;
+		string cantidad;
 
 	public:
 		Verduras();
-		Verduras(string, string, double, int);
-		Verduras(string, double, int);
+		Verduras(string, string, string, string);
+		Verduras(string, string, string);
 		//Metodos get/set nombre
 		string getName();
 		void setName(string);
 		//Metodos get/set precio por verdura
-		double getPrecioverdura();
-		void setPrecioverdura(double);
+		string getPrecioverdura();
+		void setPrecioverdura(string);
 		//Metodos get/set tipo juguete
-		int getCantidad();
-		void setCantidad(int);
+		string getCantidad();
+		void setCantidad(string);
 
 };
 

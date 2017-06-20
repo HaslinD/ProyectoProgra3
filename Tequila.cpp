@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Tequila :: Tequila (string codigo, string name, string marca, double precio, int cantidadML) : Licores(name, marca, precio, cantidadML) {
+Tequila :: Tequila (string codigo, string name, string marca, string precio, string cantidadML) : Licores(name, marca, precio, cantidadML) {
 	this -> codigo = codigo;
 }
 

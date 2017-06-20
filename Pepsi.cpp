@@ -1,8 +1,8 @@
 #include "Pepsi.h"
-
+#include "Bebidas.h"
 using namespace std;
 
-Pepsi :: Pepsi (string codigo, double precio, string sabor) : Bebidas(precio, sabor) {
+Pepsi :: Pepsi (string codigo, string precio, string sabor) : Bebidas(precio, sabor) {
 	this -> codigo = codigo;
 }
 

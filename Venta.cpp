@@ -5,8 +5,8 @@ using namespace std;
 Venta :: Venta () {
 }
 
-Venta :: Venta (string lugar, string fecha, int numerolocal, string NomApe, int numIdenti, string domicilio) : Factura(lugar, fecha, numerolocal, NomApe, numIdenti, domicilio){
-	
+Venta :: Venta (string lugar, string fecha, string numerolocal, string NomApe, string numIdenti, string domicilio) : Factura(lugar, fecha, numerolocal, NomApe, numIdenti, domicilio){
+
 }
 
 vector<string> Venta :: getObjetos() {
@@ -21,26 +21,26 @@ void Venta :: setObjects(string obj) {
 	objetos.push_back(obj);
 }
 
-void Venta :: Lugar(string lugar) {
+string Venta :: Lugar() {
 	return lugar;
 }
 
-void Venta :: Fecha(string fecha) {
+string Venta :: Fecha() {
 	return fecha;
 }
 
-void Venta :: NumLocal(int numerolocal) {
+string Venta :: NumLocal() {
 	return numerolocal;
 }
 
-void Venta :: Nombreapellido(string NomApe) {
+string Venta :: Nombreapellido() {
 	return NomApe;
 }
 
-void Venta :: Numidentificacion(int numIdenti) {
+string Venta :: Numidentificacion() {
 	return numIdenti;
 }
 
-void Venta :: Domicilio(string domicilio) {
+string Venta :: Domicilio() {
 	return domicilio;
 }

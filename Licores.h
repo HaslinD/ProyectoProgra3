@@ -3,18 +3,18 @@
 using namespace std;
 
 #ifndef LICORES_H
-#define LICORES_H 
+#define LICORES_H
 
-class Licores {
+class Licores :public Productos{
 	protected:
 		string name;
 		string marca;
-		double precio;
-		int cantidadML;
+		string precio;
+		string cantidadML;
 
 	public:
 		Licores();
-		Licores(string, string, double, int);
+		Licores(string, string, string, string);
 		//metodos get/set nombre
 		string getName();
 		void setName(string);
@@ -22,12 +22,12 @@ class Licores {
 		string getMarca();
 		void setMarca(string);
 		//Metodos get/set marca
-		double getPrecio();
-		void setPrecio(double);
+		string getPrecio();
+		void setPrecio(string);
 		//Metodos get/set tipo juguete
-		int getCantidadML();
-		void setCantidadML(int);
-	
+		string getCantidadML();
+		void setCantidadML(string);
+
 };
 
 #endif

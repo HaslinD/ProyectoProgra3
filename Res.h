@@ -12,7 +12,7 @@ class Res : public Carnes{
 		string codigo;
 
 	public:
-		Res(string, double, string);
+		Res(string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

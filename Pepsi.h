@@ -11,7 +11,7 @@ class Pepsi : public Bebidas{
 		string codigo;
 
 	public:
-		Pepsi(string, double, string);
+		Pepsi(string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

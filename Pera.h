@@ -11,7 +11,7 @@ class Pera : public Frutas{
 		string codigo;
 
 	public:
-		Pera(string, double, string);
+		Pera(string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

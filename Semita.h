@@ -12,7 +12,7 @@ class Semita : public Pan{
 		string codigo;
 
 	public:
-		Semita(string, string, string, double, string, string);
+		Semita(string, string, string, string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

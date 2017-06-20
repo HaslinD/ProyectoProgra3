@@ -18,7 +18,9 @@ class Usuario{
 
 		string getUser();
 		void setUser(string);
-		
+
+		virtual void metodo();
+
 
 };
 #endif

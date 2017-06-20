@@ -5,13 +5,13 @@ using namespace std;
 Pedido :: Pedido () {
 }
 
-Pedido :: Pedido (string descripcion, string lugar, string fecha, int numerolocal, string NomApe, int numIdenti, string domicilio) : Factura(lugar, fecha, numerolocal, NomApe, numIdenti, domicilio){
+Pedido :: Pedido (string descripcion, string lugar, string fecha, string numerolocal, string NomApe, string numIdenti, string domicilio) : Factura(lugar, fecha, numerolocal, NomApe, numIdenti, domicilio){
 	this -> descripcion = descripcion;
 }
 
 string Pedido :: getDescripcion() {
 	return descripcion;
-} 
+}
 
 void Pedido :: setDescripcion(string descripcion) {
 	this -> descripcion = descripcion;
@@ -29,26 +29,26 @@ void Pedido :: setObjects(string obj) {
 	objetos.push_back(obj);
 }
 
-string Pedido :: Lugar(string lugar) {
-	this -> lugar = lugar;
+string Pedido :: Lugar() {
+	return lugar;
 }
 
-string Pedido :: Fecha(string fecha) {
-	this -> fecha = fecha;
+string Pedido :: Fecha() {
+	return fecha;
 }
 
-int Pedido :: NumLocal(int numerolocal) {
-	this -> numerolocal = numerolocal;
+string Pedido :: NumLocal() {
+	return numerolocal;
 }
 
-string Pedido :: Nombreapellido(string NomApe) {
-	this -> NomApe = NomApe;
+string Pedido :: Nombreapellido() {
+	return NomApe;
 }
 
-int Pedido :: Numidentificacion(int numIdenti) {
-	this -> numIdenti = numIdenti;
+string Pedido :: Numidentificacion() {
+	return numIdenti;
 }
 
-string Pedido :: Domicili(string domicilio) {
-	this -> domicilio = domicilio;
+string Pedido :: Domicilio() {
+	return domicilio;
 }

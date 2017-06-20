@@ -7,16 +7,16 @@ using namespace std;
 
 #ifndef HELADERIA_H
 #define HELADERIA_H
-class Heladeria{
+class Heladeria:public Productos{
 	protected:
-		double precio;
+		string precio;
 		string tipo;
-		
+
 	public:
-		Heladeria(double,string);
+		Heladeria(string,string);
 		Heladeria();
-		double getPrecio();
-		void setPrecio(double);
+		string getPrecio();
+		void setPrecio(string);
 
 		string getTipo();
 		void setTipo(string);
