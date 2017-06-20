@@ -15,6 +15,11 @@
 #include "Vendedor.h"
 #include "Pepsi.h"
 #include "Productos.h"
+#include "CocaCola.h"
+#include "Cerdo.h"
+#include "Res.h"
+#include "Pera.h"
+#include "Manzana.h"
 //#include "Productos.h"
 
 
