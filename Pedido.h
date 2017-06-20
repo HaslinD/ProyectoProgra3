@@ -29,7 +29,7 @@ class Pedido : public Factura{
 		string NumLocal();
 		string Nombreapellido();
 		string Numidentificacion();
-		string Domicili();
+		string Domicilio();
 
 };
 #endif

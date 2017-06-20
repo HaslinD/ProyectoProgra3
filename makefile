@@ -1,15 +1,11 @@
 Main: Main.o Productos.o Bebidas.o Pepsi.o CocaCola.o Carnes.o Cerdo.o Res.o Frutas.o Pera.o Manzana.o Heladeria.o Cono.o Sundae.o Herramientas.o Martillo.o Pala.o Jugueteria.o Lego.o Puzzle.o Licores.o Ron.o Tequila.o Limpieza.o Ase.o Cloro.o Mariscos.o Pez.o Camaron.o Pan.o Galletas.o Semita.o Verduras.o Pepino.o Tomate.o Sistema.o Factura.o Pedido.o Venta.o Usuario.o Administrador.o Vendedor.o
-	g++ Main.o Productos.o Bebidas.o Pepsi.o CocaCola.o Carnes.o Cerdo.o Res.o Frutas.o Pera.o
-	Manzana.o Heladeria.o Cono.o Sundae.o Herramientas.o Martillo.o Pala.o Jugueteria.o
-	Lego.o Puzzle.o Licores.o Ron.o Tequila.o Limpieza.o Ase.o Cloro.o Mariscos.o Pez.o Camaron.o
-	Pan.o Galletas.o Semita.o Verduras.o Pepino.o Tomate.o Sistema.o Factura.o Pedido.o Venta.o Usuario.o
-	Administrador.o Vendedor.o -o Main
+		g++ Main.o Productos.o Bebidas.o Pepsi.o CocaCola.o Carnes.o Cerdo.o Res.o Frutas.o Pera.o Manzana.o Heladeria.o Cono.o Sundae.o Herramientas.o Martillo.o Pala.o Jugueteria.o Lego.o Puzzle.o Licores.o Ron.o Tequila.o Limpieza.o Ase.o Cloro.o Mariscos.o Pez.o Camaron.o Pan.o Galletas.o Semita.o Verduras.o Pepino.o Tomate.o Sistema.o Factura.o Pedido.o Venta.o Usuario.o Administrador.o Vendedor.o -o Main -lncurses
 
 Main.o: Sistema.h Main.cpp
 	g++ -c Main.cpp
 
-Sistema.o: Sistema.h Usuario.h Productos.h Sistema.cpp Sistema.h Usuario.h Bebidas.h Carnes.h Frutas.h Heladeria.h Herramientas.h Jugueteria.h Licores.h Limpieza.h Mariscos.h Pan.h Verduras.h Administrador.h Vendedor.h Pepsi.h Productos.h 
-	g++ Sistema.cpp
+Sistema.o: Sistema.h Usuario.h Productos.h Sistema.cpp Sistema.h Usuario.h Bebidas.h Carnes.h Frutas.h Heladeria.h Herramientas.h Jugueteria.h Licores.h Limpieza.h Mariscos.h Pan.h Verduras.h Administrador.h Vendedor.h Pepsi.h Productos.h CocaCola.h Cerdo.h Res.h Pera.h Manzana.h Cono.h Sundae.h
+	g++ -c Sistema.cpp
 
 Productos.o: Productos.h Productos.cpp;
 	g++ -c Productos.cpp
