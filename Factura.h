@@ -18,12 +18,12 @@ class Factura {
 		Factura();
 		Factura(string, string, int, string, int, string);
 
-		virtual string Lugar(string) = 0;
-		virtual string Fecha(string) = 0;
-		virtual int Numlocal(int) = 0;
-		virtual string Nombreapellido(string) = 0;
-		virtual int Numidentificacion(int) = 0;
-		virtual string Domicilio(string) = 0;
+		virtual void Lugar(string) = 0;
+		virtual void Fecha(string) = 0;
+		virtual void Numlocal(int) = 0;
+		virtual void Nombreapellido(string) = 0;
+		virtual void Numidentificacion(int) = 0;
+		virtual void Domicilio(string) = 0;
 
 };
 #endif

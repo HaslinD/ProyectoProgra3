@@ -21,26 +21,26 @@ void Venta :: setObjects(string obj) {
 	objetos.push_back(obj);
 }
 
-string Venta :: Lugar(string lugar) {
-	this -> lugar = lugar;
+void Venta :: Lugar(string lugar) {
+	return lugar;
 }
 
-string Venta :: Fecha(string fecha) {
-	this -> fecha = fecha;
+void Venta :: Fecha(string fecha) {
+	return fecha;
 }
 
-int Venta :: NumLocal(int numerolocal) {
-	this -> numerolocal = numerolocal;
+void Venta :: NumLocal(int numerolocal) {
+	return numerolocal;
 }
 
-string Venta :: Nombreapellido(string NomApe) {
-	this -> NomApe = NomApe;
+void Venta :: Nombreapellido(string NomApe) {
+	return NomApe;
 }
 
-int Venta :: Numidentificacion(int numIdenti) {
-	this -> numIdenti = numIdenti;
+void Venta :: Numidentificacion(int numIdenti) {
+	return numIdenti;
 }
 
-string Venta :: Domicilio(string domicilio) {
-	this -> domicilio = domicilio;
+void Venta :: Domicilio(string domicilio) {
+	return domicilio;
 }

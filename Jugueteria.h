@@ -1,4 +1,5 @@
 #include <string>
+#include "Producto.h"
 
 #ifndef JUGUETERIA_H
 #define JUGUETERIA_H
