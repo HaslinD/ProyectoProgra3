@@ -12,7 +12,7 @@ class Mariscos:public Productos{
 		string precio;
 		string peso;
 
-	private:
+	public:
 		Mariscos();
 		Mariscos(string, string, string);
 		//set y get de nombre

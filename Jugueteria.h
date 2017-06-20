@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Jugueteria : public Jugueteria{
+class Jugueteria : public Productos{
 	protected:
 		string name;
 		string marca;
