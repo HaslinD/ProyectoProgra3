@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <ncurses.h>
 //#include "Usuario.h"
 #include "Sistema.h"
 

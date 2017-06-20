@@ -1,3 +1,4 @@
+#include <ncurses.h>
 #include "Sistema.h"
 #include "Usuario.h"
 #include "Bebidas.h"
@@ -20,7 +21,10 @@
 #include "Res.h"
 #include "Pera.h"
 #include "Manzana.h"
+#include "Cono.h"
+#include "Sundae.h"
 //#include "Productos.h"
+
 
 
 using namespace std;
@@ -361,7 +365,7 @@ void Sistema::run(){
                     char cod[9];
                     getstr(cod);
                     string codigo = static_cast<char*>(cod);
-                    Productos* helado=new Pera(codigo,precio,"Cono");
+                    Productos* helado=new Cono(codigo,precio,"Cono");
                     productos.push_back(helado);
                     mvprintw(6,20,"Se ha agregado correctamente: ");
                   }
@@ -375,8 +379,8 @@ void Sistema::run(){
                     char cod[9];
                     getstr(cod);
                     string codigo = static_cast<char*>(cod);
-                    Productos* fruta=new Manzana(codigo,precio,"Sundae");
-                    productos.push_back(fruta);
+                    Productos* helado=new Sundae(codigo,precio,"Sundae");
+                    productos.push_back(helado);
                     mvprintw(6,20,"Se ha agregado correctamente: ");
                   }
                   else if (op[0]=='3'){//salir
