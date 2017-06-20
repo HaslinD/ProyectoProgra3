@@ -18,11 +18,11 @@ class Factura {
 		Factura();
 		Factura(string, string, string, string, string, string);
 
-		virtual string Lugar() = 0;
-		virtual string Fecha() = 0;
-		virtual string Numlocal() = 0;
-		virtual string Nombreapellido() = 0;
-		virtual string Numidentificacion() = 0;
-		virtual string Domicilio() = 0;
+		virtual string Lugar();
+		virtual string Fecha();
+		virtual string Numlocal();
+		virtual string Nombreapellido();
+		virtual string Numidentificacion();
+		virtual string Domicilio();
 };
 #endif

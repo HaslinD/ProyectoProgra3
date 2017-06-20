@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Usuario.h"
+//#include "Usuario.h"
 #include "Sistema.h"
 
 using namespace std;

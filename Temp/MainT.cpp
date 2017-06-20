@@ -19,20 +19,21 @@ int main(){
 	while (!salir){
         switch(menu()){
            	case 1:{
-                Factura fc = new Venta();
+                Venta* fc;
                 Fact.open("Factura.txt", ios::app);
 
-                Fact << fc.Lugar() << endl;   
-                Fact << fc.Fecha() << endl;
-                Fact << fc.Nombreapellido() << endl;
-                Fact << fc.Numidentificacion() << endl;
-                Fact << fc.Domicilio() << endl;
+                Fact << fc -> Lugar() << endl;   
+                Fact << fc -> Fecha() << endl;
+                Fact << fc -> Nombreapellido() << endl;
+                Fact << fc -> Numidentificacion() << endl;
+                Fact << fc -> Domicilio() << endl;
                 Fact << "# " << "   Nombre   " << "   Precio  " << endl; 
                 
-                for (int i = 0; i < fc.getObjetos().size(); ++i)
+                for (int i = 0; i < fc -> getObjetos().size(); ++i)
                 {
-                    Fact << i << endl;
+                    Fact << i << fc -> getObjetos().at(i) << "$$" << endl;
                 }
+                Fact << "Gracias Por Su Compra" << endl;
 
                	break;}
 
