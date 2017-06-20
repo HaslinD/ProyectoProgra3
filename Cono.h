@@ -6,7 +6,6 @@ using namespace std;
 #ifndef CONO_H
 #define CONO_H
 
-
 class Cono : public Heladeria{
 	private:
 		string codigo;
