@@ -18,3 +18,4 @@ class Martillo : public Herramientas{
 		void setCodigo(string);
 
 };
+#endif
