@@ -12,7 +12,7 @@ class Tomate : public Verduras{
 		string codigo;
 
 	public:
-		Tomate(string, string, double, int);
+		Tomate(string, string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

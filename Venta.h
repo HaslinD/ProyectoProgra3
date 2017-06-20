@@ -6,12 +6,12 @@ using namespace std;
 
 class Venta : public Factura{
 	private:
-		
+
 		vector<string> objetos;
 
 	public:
 		Venta();
-		Venta(string, string, int, string, int, string);
+		Venta(string, string, string, string, string, string);
 
 		vector<string> getObjetos();
 		void setObjetos(vector<string> objetos);
@@ -20,9 +20,9 @@ class Venta : public Factura{
 
 		string Lugar(string);
 		string Fecha(string);
-		int NumLocal(int);
+		string NumLocal(string);
 		string Nombreapellido(string);
-		int Numidentificacion(int);
+		string Numidentificacion(string);
 		string Domicilio(string);
 
 };

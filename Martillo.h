@@ -12,7 +12,7 @@ class Martillo : public Herramientas{
 		string codigo;
 
 	public:
-		Martillo(string, string, double);
+		Martillo(string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

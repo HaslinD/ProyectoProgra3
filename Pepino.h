@@ -12,7 +12,7 @@ class Pepino : public Verduras{
 		string codigo;
 
 	public:
-		Pepino(string, string, double, int);
+		Pepino(string, string, string, int);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

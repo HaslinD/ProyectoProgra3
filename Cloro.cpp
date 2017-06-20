@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Cloro :: Cloro (string codigo, double precio, string tipo) : Limpieza(precio, tipo) {
+Cloro :: Cloro (string codigo, string precio, string tipo) : Limpieza(precio, tipo) {
 	this -> codigo = codigo;
 }
 

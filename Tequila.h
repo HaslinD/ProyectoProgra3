@@ -12,7 +12,7 @@ class Tequila : public Licores{
 		string codigo;
 
 	public:
-		Tequila(string, string, string, double, int);
+		Tequila(string, string, string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

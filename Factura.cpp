@@ -4,7 +4,7 @@ Factura :: Factura () {
 
 }
 
-Factura :: Factura (string lugar, string fecha, int numerolocal, string NomApe, int numIdenti, string domicilio) {
+Factura :: Factura (string lugar, string fecha, string numerolocal, string NomApe, string numIdenti, string domicilio) {
 	this -> lugar = lugar;
 	this -> fecha = fecha;
 	this -> numerolocal = numerolocal;

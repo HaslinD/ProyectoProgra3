@@ -12,7 +12,7 @@ class Ron : public Licores{
 		string codigo;
 
 	public:
-		Ron(string, string, string, double, int);
+		Ron(string, string, string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

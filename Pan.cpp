@@ -6,7 +6,7 @@ Pan :: Pan() {
 
 }
 
-Pan :: Pan(string name, string estado, double precio, string tipo, string fechaVencimiento) {
+Pan :: Pan(string name, string estado, string precio, string tipo, string fechaVencimiento) :Productos(){
 	this -> name = name;
 	this -> estado = estado;
 	this -> precio = precio;
@@ -30,11 +30,11 @@ void Pan :: setEstado(string estado) {
 	this -> estado = estado;
 }
 
-double Pan :: getPrecio() {
+string Pan :: getPrecio() {
 	return precio;
 }
 
-void Pan :: setPrecio(double precio) {
+void Pan :: setPrecio(string precio) {
 	this -> precio = precio;
 }
 

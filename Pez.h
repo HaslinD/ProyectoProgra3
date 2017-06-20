@@ -12,7 +12,7 @@ class Pez : public Mariscos{
 		string codigo;
 
 	public:
-		Pez(string, string, double, double);
+		Pez(string, string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

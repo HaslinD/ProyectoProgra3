@@ -12,7 +12,7 @@ class Pala : public Herramientas{
 		string codigo;
 
 	public:
-		Pala(string, string, double);
+		Pala(string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

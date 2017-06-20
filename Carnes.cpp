@@ -1,15 +1,15 @@
 #include "Carnes.h"
 
-Carnes::Carnes(double precio,string tipo){
+Carnes::Carnes(string precio,string tipo):Productos(){
 	this->precio=precio;
 	this->tipo=tipo;
 }
 Carnes::Carnes(){
 
-}void Carnes::setPrecio(double precio){
+}void Carnes::setPrecio(string precio){
    this-> precio=precio;
 }
-double Carnes::getPrecio(){
+string Carnes::getPrecio(){
    return precio;
 }
 void Carnes::setTipo(string tipo){

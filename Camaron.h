@@ -12,7 +12,7 @@ class Camaron : public Mariscos{
 		string codigo;
 
 	public:
-		Camaron(string, string, double, double);
+		Camaron(string, string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

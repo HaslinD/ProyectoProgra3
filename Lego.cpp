@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Lego :: Lego (string codigo, string name, string marca, double precio, string tipo) : Jugueteria(name, marca, precio, tipo) {
+Lego :: Lego (string codigo, string name, string marca, string precio, string tipo) : Jugueteria(name, marca, precio, tipo) {
 	this -> codigo = codigo;
 }
 

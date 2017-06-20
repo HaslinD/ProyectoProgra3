@@ -6,16 +6,16 @@ using namespace std;
 
 #ifndef FRUTAS_H
 #define FRUTAS_H
-class Frutas{
+class Frutas:public Productos{
 	protected:
-		double precio;
+		string precio;
 		string tipo;
-		
+
 	public:
-		Frutas(double,string);
+		Frutas(string,string);
 		Frutas();
-		double getPrecio();
-		void setPrecio(double);
+		string getPrecio();
+		void setPrecio(string);
 
 		string getTipo();
 		void setTipo(string);

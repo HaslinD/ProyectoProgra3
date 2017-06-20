@@ -12,7 +12,7 @@ class CocaCola : public Bebidas{
 		string codigo;
 
 	public:
-		CocaCola(string, double, string);
+		CocaCola(string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

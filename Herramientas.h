@@ -6,18 +6,18 @@ using namespace std;
 
 #ifndef HERRAMIENTAS_H
 #define HERRAMIENTAS_H
-class Herramientas{
+class Herramientas : public Productos{
 	protected:
 		string tipo;
-		double precio;
+		string precio;
 	public:
-		Herramientas(string,double);
+		Herramientas(string,string);
 		Herramientas();
 		string getTipo();
 		void setTipo(string);
 
-		double getPrecio();
-		void setPrecio(double);
+		string getPrecio();
+		void setPrecio(string);
 
 };
 #endif

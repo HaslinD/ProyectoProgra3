@@ -1,15 +1,15 @@
 #include "Frutas.h"
 
-Frutas::Frutas(double precio,string tipo){
+Frutas::Frutas(string precio,string tipo):Productos(){
 	this->precio=precio;
 	this->tipo=tipo;
 }
 Frutas::Frutas(){
 
-}void Frutas::setPrecio(double precio){
+}void Frutas::setPrecio(string precio){
    this-> precio=precio;
 }
-double Frutas::getPrecio(){
+string Frutas::getPrecio(){
    return precio;
 }
 void Frutas::setTipo(string tipo){

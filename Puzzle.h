@@ -12,7 +12,7 @@ class Puzzle : public Jugueteria{
 		string codigo;
 
 	public:
-		Puzzle(string, string, string, double, string);
+		Puzzle(string, string, string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

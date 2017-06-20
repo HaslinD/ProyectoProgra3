@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Pez :: Pez (string codigo, string name, double precio, double peso) : Mariscos(name, precio, peso) {
+Pez :: Pez (string codigo, string name, string precio, string peso) : Mariscos(name, precio, peso) {
 	this -> codigo = codigo;
 }
 

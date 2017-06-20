@@ -11,9 +11,9 @@ using namespace std;
 class Ase : public Limpieza{
 	private:
 		string codigo;
-		
+
 	public:
-		Ase(string, double, string);
+		Ase(string, string, string);
 		//get/set codigo
 		string getCodigo();
 		void setCodigo(string);

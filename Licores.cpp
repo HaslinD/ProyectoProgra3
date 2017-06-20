@@ -6,7 +6,7 @@ Licores :: Licores() {
 
 }
 
-Licores :: Licores(string name, string marca, double precio, int cantidadML) {
+Licores :: Licores(string name, string marca, string precio, string cantidadML) :Productos(){
 	this -> name = name;
 	this -> marca = marca;
 	this -> precio = precio;
@@ -29,18 +29,18 @@ void Licores :: setMarca(string marca) {
 	this -> marca = marca;
 }
 
-double Licores :: getPrecio() {
+string Licores :: getPrecio() {
 	return precio;
 }
 
-void Licores :: setPrecio(double precio) {
+void Licores :: setPrecio(string precio) {
 	this -> precio = precio;
 }
 
-int Licores :: getCantidadML() {
+string Licores :: getCantidadML() {
 	return cantidadML;
 }
 
-void Licores :: setCantidadML(int cantidad) {
+void Licores :: setCantidadML(string cantidad) {
 	this -> cantidadML = cantidadML;
 }
