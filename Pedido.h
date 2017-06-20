@@ -21,11 +21,11 @@ class Pedido : public Factura{
 
 		void setObjects(string obj);
 
-		string Lugar(string);
-		string Fecha(string);
-		string NumLocal(string);
-		string Nombreapellido(string);
-		string Numidentificacion(string);
-		string Domicili(string);
+		string Lugar();
+		string Fecha();
+		string NumLocal();
+		string Nombreapellido();
+		string Numidentificacion();
+		string Domicili();
 
 };

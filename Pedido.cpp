@@ -29,26 +29,26 @@ void Pedido :: setObjects(string obj) {
 	objetos.push_back(obj);
 }
 
-string Pedido :: Lugar(string lugar) {
-	this -> lugar = lugar;
+string Pedido :: Lugar() {
+	return lugar;
 }
 
-string Pedido :: Fecha(string fecha) {
-	this -> fecha = fecha;
+string Pedido :: Fecha() {
+	return fecha;
 }
 
-string Pedido :: NumLocal(string numerolocal) {
-	this -> numerolocal = numerolocal;
+string Pedido :: NumLocal() {
+	return numerolocal;
 }
 
-string Pedido :: Nombreapellido(string NomApe) {
-	this -> NomApe = NomApe;
+string Pedido :: Nombreapellido() {
+	return NomApe;
 }
 
-string Pedido :: Numidentificacion(string numIdenti) {
-	this -> numIdenti = numIdenti;
+string Pedido :: Numidentificacion() {
+	return numIdenti;
 }
 
-string Pedido :: Domicili(string domicilio) {
-	this -> domicilio = domicilio;
+string Pedido :: Domicilio() {
+	return domicilio;
 }

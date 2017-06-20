@@ -18,11 +18,11 @@ class Venta : public Factura{
 
 		void setObjects(string obj);
 
-		string Lugar(string);
-		string Fecha(string);
-		string NumLocal(string);
-		string Nombreapellido(string);
-		string Numidentificacion(string);
-		string Domicilio(string);
+		string Lugar();
+		string Fecha();
+		string NumLocal();
+		string Nombreapellido();
+		string Numidentificacion();
+		string Domicilio();
 
 };

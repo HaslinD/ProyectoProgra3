@@ -1,4 +1,5 @@
 #include <string>
+#include "Producto.h"
 
 #ifndef MARISCOS_H
 #define MARISCOS_H
