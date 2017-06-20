@@ -18,9 +18,5 @@ class Pala : public Herramientas{
 		void setCodigo(string);
 
 };
-<<<<<<< HEAD
 
 #endif
-=======
-#endif
->>>>>>> 369e19a8fa160a6649013cfe6cf86bb140d6816b
