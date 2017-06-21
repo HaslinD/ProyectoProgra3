@@ -24,6 +24,8 @@
 #include "Cono.h"
 #include "Sundae.h"
 #include <typeinfo>
+#include <fstream>
+#include <stdlib.h>
 //#include "Productos.h"
 
 
@@ -43,6 +45,7 @@ void Sistema::run(){
   usuarios.push_back(user);*/
   bool libre=false;
   archivo1.open("Usuario.txt",ios::app);
+
   while(!libre){
     mvprintw(4, 20, "BIENVENIDO AL SISTEMA");
     mvprintw(5, 10, "[1]. Registrarse");
@@ -896,10 +899,11 @@ void Sistema::run(){
               string res = static_cast<char*>(respuesta);
               getch();
               for (int i = 0; i < productos.size(); ++i) {
+                if (typeid(*productos[i]) == typeid(Bebidas))
+                {
+                  /* code */
+                }
                 if (res == "1") { //Mod Bebidas
-                  if (typeid()) {
-                    /* code */
-                  }
                   cleanScreen();
                   bool libre=false;
                   while(!libre){
@@ -1006,9 +1010,78 @@ void Sistema::run(){
         }
       }//fin Administrador
       if (tipo==2){//Vendedor
-        cleanScreen();
-        mvprintw(20,15,"Entro Vendedor");
+        mvprintw(2, 10, "HA INGRESADO COMO VENDEDOR ");
+        mvprintw(4, 10, "Que Desea Hacer? ");
+        mvprintw(5, 10, "[1]. Vender");
+        mvprintw(6, 10, "[2]. Hacer Una Factura");
+        mvprintw(7, 10, "[3]. Salir");
+        mvprintw(8, 10, "ELIGA LA OPCION: ");
+        char opcion[1];
+        getstr(opcion);
         getch();
+        if (opcion[0] == '1') {//Venta de Objetos
+          Venta* ventas;
+          mvprintw(6,20,"Ingrese Que desea Comprar: ");
+          char vent[9];
+          int vnta = atoi(vent);
+          do {
+            ventas -> setObjects(Productos.at(vnta) -> getTipo() + Productos.at(vnta) -> getPrecio());
+          } while (vnta > 0 && vnta < productos.size());
+
+        } else if (opcion[1] == '2') {// Facturacion
+          Venta* ventas;
+          Fact.open("Factura.txt", ios::app);
+          mvprintw(6,20,"Ingrese lugar de Compra: ");
+          char lug[9];
+          getstr(lug);
+          string lugar = static_cast<char*>(lug);
+          mvprintw(6,20,"Ingrese Fecha de Compra: ");
+          char fech[9];
+          getstr(fech);
+          string fecha = static_cast<char*>(fech);
+          mvprintw(6,20,"Ingrese Numero Local: ");
+          char nloc[9];
+          getstr(nloc);
+          string nlocal = static_cast<char*>(nloc);
+          mvprintw(6,20,"Ingrese Nombre del Comprador: ");
+          char nom[9];
+          getstr(nom);
+          string nombre = static_cast<char*>(nom);
+          mvprintw(6,20,"Ingrese Identidad del Comprador: ");
+          char id[9];
+          getstr(id);
+          string identificacion = static_cast<char*>(id);
+          mvprintw(6,20,"Ingrese Domicilio: ");
+          char dom[9];
+          getstr(dom);
+          string domicilio = static_cast<char*>(dom);
+          Factura* bedi=new Venta(lugar, fecha, nlocal, nombre, identificacion, domicilio);
+
+          Fact << ventas -> Lugar() << endl;   
+          Fact << ventas -> Fecha() << endl;
+          Fact << ventas -> Nombreapellido() << endl;
+          Fact << ventas -> Numidentificacion() << endl;
+          Fact << ventas -> Domicilio() << endl;
+          Fact << "# " << "   Nombre   " << "   Precio  " << endl; 
+          for (int i = 0; i < ventas -> getObjetos().size(); ++i) {
+            Fact << i << fc -> getObjetos().at(i) << endl;
+          }
+          Fact << "Gracias Por Su Compra" << endl;
+
+        } else if (opcion[2] == '3') {
+          cleanScreen();
+            salir=true;
+            mvprintw(5,20,"Gracias por entrar al sistema Vendedor");
+            getch();
+          } else{
+            cleanScreen();
+            mvprintw(5,20,"Opcion no valida, intente de nuevo...");
+            getch();
+        }
+
+        cleanScreen();
+        //mvprintw(20,15,"Entro Vendedor");
+        //getch();
       }//fin Vendedor
     }//fin login in
     else if (opcion[0]=='3'){//salir

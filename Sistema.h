@@ -17,6 +17,7 @@ class Sistema{
     vector<Productos*> productos;
     ofstream archivo1;
     ofstream archivo2;
+    ofstream Fact;
 
 
   public:
