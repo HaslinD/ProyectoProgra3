@@ -153,7 +153,7 @@ void Sistema::run(){
       //string password=pass;
       getch();
       cleanScreen();
-      int tipo;
+      int tipo=0;
       for (int i = 0; i < usuarios.size(); i++) {
         if((usuario==usuarios[i]->getUser()) && (password==usuarios[i]->getPassword())){
           if (dynamic_cast<Administrador*>(usuarios[i])){//Administrador login
