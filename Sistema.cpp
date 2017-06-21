@@ -37,6 +37,7 @@
 #include "Tomate.h"
 #include "Pepino.h"
 #include "Integer.h"
+#include "Venta.h"
 #include <iostream>
 #include <stdlib.h>
 #include <typeinfo>
@@ -918,6 +919,7 @@ void Sistema::run(){
         }
       }//fin Administrador
       if (tipo==2){//Vendedor
+        bool val = false;
         mvprintw(2, 10, "HA INGRESADO COMO VENDEDOR ");
         mvprintw(4, 10, "Que Desea Hacer? ");
         mvprintw(5, 10, "[1]. Vender");
@@ -928,17 +930,6 @@ void Sistema::run(){
         getstr(opcion);
         getch();
         if (opcion[0] == '1') {//Venta de Objetos
-          Venta* ventas;
-          mvprintw(6,20,"Ingrese Que desea Comprar: ");
-          char vent[9];
-          int vnta = atoi(vent);
-          do {
-            ventas -> setObjects(Productos.at(vnta) -> getTipo() + Productos.at(vnta) -> getPrecio());
-          } while (vnta > 0 && vnta < productos.size());
-
-        } else if (opcion[1] == '2') {// Facturacion
-          Venta* ventas;
-          Fact.open("Factura.txt", ios::app);
           mvprintw(6,20,"Ingrese lugar de Compra: ");
           char lug[9];
           getstr(lug);
@@ -963,22 +954,35 @@ void Sistema::run(){
           char dom[9];
           getstr(dom);
           string domicilio = static_cast<char*>(dom);
-          Factura* bedi=new Venta(lugar, fecha, nlocal, nombre, identificacion, domicilio);
+          Factura* ventatodo=new Venta(lugar, fecha, "23", nombre, identificacion, domicilio);
+          facturas.push_back(ventatodo);
+          int vnta;
+          do {
+            mvprintw(6,20,"Ingrese Que desea Comprar: ");
+            char vent[9];
+            vnta = atoi(vent);
+          
+            compra.push_back(productos.at(vnta));
+          } while (vnta > 0 && vnta < productos.size());
 
-          Fact << ventas -> Lugar() << endl;   
-          Fact << ventas -> Fecha() << endl;
-          Fact << ventas -> Nombreapellido() << endl;
-          Fact << ventas -> Numidentificacion() << endl;
-          Fact << ventas -> Domicilio() << endl;
+        } else if (opcion[1] == '2') {// Facturacion
+          Venta* ventatodo;
+          Fact.open("Factura.txt", ios::app);
+          
+          Fact << ventatodo -> Lugar() << endl;   
+          Fact << ventatodo -> Fecha() << endl;
+          Fact << ventatodo -> Nombreapellido() << endl;
+          Fact << ventatodo -> Numidentificacion() << endl;
+          Fact << ventatodo -> Domicilio() << endl;
           Fact << "# " << "   Nombre   " << "   Precio  " << endl; 
-          for (int i = 0; i < ventas -> getObjetos().size(); ++i) {
-            Fact << i << fc -> getObjetos().at(i) << endl;
+          for (int i = 0; i < compra.size(); ++i) {
+            Fact << i << compra.at(i) << endl;
           }
           Fact << "Gracias Por Su Compra" << endl;
 
         } else if (opcion[2] == '3') {
           cleanScreen();
-            salir=true;
+            val=true;
             mvprintw(5,20,"Gracias por entrar al sistema Vendedor");
             getch();
           } else{

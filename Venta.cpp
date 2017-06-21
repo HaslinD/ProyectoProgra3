@@ -1,4 +1,6 @@
 #include "Venta.h"
+#include <sstream>
+#include <string>
 
 using namespace std;
 
@@ -17,10 +19,6 @@ void Venta :: setObjetos(vector<string> objetos) {
 	this -> objetos = objetos;
 }
 
-void Venta :: setObjects(string obj) {
-	objetos.push_back(obj);
-}
-
 string Venta :: Lugar() {
 	return lugar;
 }
@@ -29,9 +27,9 @@ string Venta :: Fecha() {
 	return fecha;
 }
 
-string Venta :: NumLocal() {
+/*string Venta :: NumLocal() {
 	return numerolocal;
-}
+}*/
 
 string Venta :: Nombreapellido() {
 	return NomApe;

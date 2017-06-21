@@ -6,6 +6,7 @@
 #include <vector>
 #include "Usuario.h"
 #include "Productos.h"
+#include "Factura.h"
 #include <fstream>
 
 #ifndef SISTEMA_H
@@ -15,6 +16,8 @@ class Sistema{
   private:
     vector<Usuario*> usuarios;
     vector<Productos*> productos;
+    vector<Factura*> facturas;
+    vector<Productos*> compra;
     ofstream archivo1;
     ofstream archivo2;
     ofstream Fact;

@@ -37,9 +37,9 @@ string Pedido :: Fecha() {
 	return fecha;
 }
 
-string Pedido :: NumLocal() {
+/*string Pedido :: NumLocal() {
 	return numerolocal;
-}
+}*/
 
 string Pedido :: Nombreapellido() {
 	return NomApe;
