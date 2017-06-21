@@ -4,7 +4,7 @@ Main: Main.o Productos.o Bebidas.o Pepsi.o CocaCola.o Carnes.o Cerdo.o Res.o Fru
 Main.o: Sistema.h Main.cpp
 	g++ -c Main.cpp
 
-Sistema.o: Sistema.h Usuario.h Productos.h Sistema.cpp Sistema.h Usuario.h Bebidas.h Carnes.h Frutas.h Heladeria.h Herramientas.h Jugueteria.h Licores.h Limpieza.h Mariscos.h Pan.h Verduras.h Administrador.h Vendedor.h Pepsi.h Productos.h CocaCola.h Cerdo.h Res.h Pera.h Manzana.h Cono.h Sundae.h
+Sistema.o: Sistema.h Usuario.h Productos.h Sistema.cpp Sistema.h Usuario.h Bebidas.h Carnes.h Frutas.h Heladeria.h Herramientas.h Jugueteria.h Licores.h Limpieza.h Mariscos.h Pan.h Verduras.h Administrador.h Vendedor.h Pepsi.h Productos.h CocaCola.h Cerdo.h Res.h Pera.h Manzana.h Cono.h Sundae.h Martillo.h Lego.h Puzzle.h Ron.h Tequila.h Ase.h Cloro.h Camaron.h Pez.h Semita.h Galletas.h Tomate.h Pepino.h
 	g++ -c Sistema.cpp
 
 Productos.o: Productos.h Productos.cpp;

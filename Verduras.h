@@ -6,7 +6,7 @@ using namespace std;
 #ifndef VERDURAS_H
 #define VERDURAS_H
 
-class Verduras {
+class Verduras :public Productos{
 	protected:
 		string name;
 		string frescura;
