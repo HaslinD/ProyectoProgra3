@@ -23,7 +23,24 @@
 #include "Manzana.h"
 #include "Cono.h"
 #include "Sundae.h"
+#include "Martillo.h"
+#include "Lego.h"
+#include "Puzzle.h"
+#include "Ron.h"
+#include "Tequila.h"
+#include "Ase.h"
+#include "Cloro.h"
+#include "Camaron.h"
+#include "Pez.h"
+#include "Semita.h"
+#include "Galletas.h"
+#include "Tomate.h"
+#include "Pepino.h"
+#include "Integer.h"
+#include <iostream>
+#include <stdlib.h>
 #include <typeinfo>
+#include <sstream>
 //#include "Productos.h"
 
 
@@ -47,8 +64,9 @@ void Sistema::run(){
     mvprintw(4, 20, "BIENVENIDO AL SISTEMA");
     mvprintw(5, 10, "[1]. Registrarse");
     mvprintw(6, 10, "[2]. Log In");
-    mvprintw(7, 10, "[3]. Salir");
-    mvprintw(8, 10, "Ingrese la opcion: ");
+    mvprintw(7, 10, "[3]. Calculadora");
+    mvprintw(8, 10, "[4]. Salir");
+    mvprintw(9, 10, "Ingrese la opcion: ");
     char opcion[1];
     getstr(opcion);
     getch();
@@ -82,6 +100,7 @@ void Sistema::run(){
           usuarios.push_back(admin);
           mvprintw(10, 10, "Se registró correctamente");
           getch();
+          archivo1<<"Usuario: "<<usuario<< " Contraseña: "<<contrasena;
         }else if (opcion[0]=='2'){//sign up Vendedor
           cleanScreen();
           mvprintw(5, 10, "Ingrese su Id: ");
@@ -104,10 +123,11 @@ void Sistema::run(){
           usuarios.push_back(vendedor);
           mvprintw(10, 10, "Se registró correctamente");
           getch();
-
+          archivo1<<"Usuario: "<<usuario<< " Contraseña: "<<contrasena;
         }else if (opcion[0]=='3'){
           cleanScreen();
           libre=true;
+          archivo1.close();
         }else {
           cleanScreen();
           mvprintw(5,20,"Opcion no valida, intente de nuevo...");
@@ -156,10 +176,9 @@ void Sistema::run(){
           mvprintw(2, 10, "BIENVENIDO ADMINISTRADOR ");
           mvprintw(4, 10, "Que Desea Hacer? ");
           mvprintw(5, 10, "[1]. Agregar Inventario");
-          mvprintw(6, 10, "[2]. Modificar Inventario");
-          mvprintw(7, 10, "[3]. Eliminar Inventario");
-          mvprintw(8, 10, "[4]. Salir");
-          mvprintw(9, 10, "ELIGA LA OPCION: ");
+          mvprintw(6, 10, "[2]. Eliminar Inventario");
+          mvprintw(7, 10, "[3]. Salir");
+          mvprintw(8, 10, "ELIGA LA OPCION: ");
           char opcion[1];
           getstr(opcion);
           getch();
@@ -873,126 +892,16 @@ void Sistema::run(){
               cleanScreen();
             }
           }//fin agregar
-          else if(opcion[0]=='2'){//modificar 
-            cleanScreen(); 
-            bool val=false;
-            while(!val){
-              mvprintw(2, 10, "Que desea Modificar ");
-              mvprintw(3, 10, "[1]. Bebidas");
-              mvprintw(4, 10, "[2]. Carnes");
-              mvprintw(5, 10, "[3]. Frutas");
-              mvprintw(6, 10, "[4]. Heladeria");
-              mvprintw(7, 10, "[5]. Herramientas");
-              mvprintw(8, 10, "[6]. Jugueteria");
-              mvprintw(9, 10, "[7]. Licores");
-              mvprintw(10, 10, "[8]. Limpieza");
-              mvprintw(11, 10, "[9]. Mariscos");
-              mvprintw(12, 10, "[10]. Pan");
-              mvprintw(13, 10, "[11]. Verduras");
-              mvprintw(14, 10, "[12]. Salir");
-              mvprintw(15, 10, "ELIGA LA OPCION: ");
-              char respuesta[1];
-              getstr(respuesta);
-              string res = static_cast<char*>(respuesta);
-              getch();
-              for (int i = 0; i < productos.size(); ++i) {
-                if (res == "1") { //Mod Bebidas
-                  if (typeid()) {
-                    /* code */
-                  }
-                  cleanScreen();
-                  bool libre=false;
-                  while(!libre){
-                    mvprintw(5,20,"Cual desea Modificar: ");
-                    mvprintw(6,20,"[1]. Coca Cola");
-                    mvprintw(7,20,"[2]. Pepsi");
-                    mvprintw(8,20,"[3]. Salir");
-                    mvprintw(9,20,"Ingrese Opcion: ");
-                    char op[1];
-                    getstr(op);
-                    
-                      if (op[0]=='1'){//coca-cola
-                        cleanScreen();
-                        mvprintw(6,20,"Ingrese precio: ");
-                        char price[9];
-                        getstr(price);
-                        string precio = static_cast<char*>(price);
-                        mvprintw(7,20,"Ingrese codigo: ");
-                        char cod[9];
-                        getstr(cod);
-                        string codigo = static_cast<char*>(cod);
-                        mvprintw(8,20,"seleccione que Bebida Va Modificar: ");
-                        char Amod[9];
-                        getstr(Amod);
-                        string modify = static_cast<char*>(Amod);
-
-                        mvprintw(6,20,"Se ha agregado correctamente: ");
-                      }
-                      else if (op[0]=='2'){//pepsi
-                        cleanScreen();
-                        mvprintw(6,20,"Ingrese Precio: ");
-                        char price[9];
-                        getstr(price);
-                        string precio = static_cast<char*>(price);
-                        mvprintw(7,20,"Ingrese Código: ");
-                        char cod[9];
-                        getstr(cod);
-                        string codigo = static_cast<char*>(cod);
-                        Productos* bedi=new Pepsi(codigo,precio,"Pepsi");
-                        productos.push_back(bedi);
-                        mvprintw(6,20,"Se ha agregado correctamente: ");
-                      }
-                      else if (op[0]=='3'){//salir
-                        cleanScreen();
-                        libre=true;
-                      }else{
-                        cleanScreen();
-                        mvprintw(5,20,"Opcion no valida, intente de nuevo...");
-                        getch();
-                      }
-                      cleanScreen();
-                    
-                  }
-
-                  getch();
-                  
-                } else if (res == "2") {//Mod Carnes
-                  
-                } else if (res == "3") {//Mod Frutas
-                  
-                } else if (res == "4") {//Mod Heladeria
-                  
-                } else if (res == "5") {//Mod Herramientas
-                  
-                } else if (res == "6") {//Mod Jugueteria
-                  
-                } else if (res == "7") {//Mod Licores
-                  
-                } else if (res == "8") {//Mod Limpieza
-                  
-                } else if (res == "9") {//Mod Mariscos
-                  
-                } else if (res == "10") {//Mod Pan
-                  
-                } else if (res == "11") {//Mod Verduras
-                  
-                } else if (res == "12") {
-                  cleanScreen();
-                  val=true;
-                }else{
-                  cleanScreen();
-                  mvprintw(5,20,"Opcion no valida, intente de nuevo...");
-                  getch();
-                }
-                cleanScreen();
-              }
-            }
-
-          }//fin Modificar
-          else if (opcion[0]=='3'){//eliminar
-            cleanScreen();
+          else if(opcion[0]=='2'){//eliminar
+              cleanScreen();
+              mvprintw(5,20,"Ingrese la posicion del vector que desea eliminar: ");
+              char pos[1];
+              getstr(pos);
+              int posicion=atoi(pos);
+              productos.erase(productos.begin()+posicion);
+              mvprintw(5,20,"Se ha eliminado correctamente");
           }//fin eliminar
-          else if (opcion[0]=='4'){//salir
+          else if (opcion[0]=='3'){//salir
             cleanScreen();
             salir=true;
             mvprintw(5,20,"Gracias por entrar al sistema Administrador");
@@ -1011,10 +920,83 @@ void Sistema::run(){
         getch();
       }//fin Vendedor
     }//fin login in
-    else if (opcion[0]=='3'){//salir
+    else if (opcion[0]=='3'){//Calculadora
+      bool salir=false;
+      while(!salir){
+        mvprintw(4, 10, "Que Desea Hacer? ");
+        mvprintw(5, 10, "[1]. Suma");
+        mvprintw(6, 10, "[2]. Resta");
+        mvprintw(7, 10, "[3]. Salir");
+        mvprintw(8, 10, "ELIGA LA OPCION: ");
+        char opcion[1];
+        getstr(opcion);
+        getch();
+        if (opcion[0]=='1'){//suma
+          cleanScreen();
+          int num1,num2,total;
+          mvprintw(4, 10, "Ingrese numero 1: ");
+          char numero1[9];
+          getstr(numero1);
+          num1=atoi(numero1);
+          Integer* t1=new Integer(num1);
+          mvprintw(5, 10, "Ingrese numero 2: ");
+          char numero2[9];
+          getstr(numero2);
+          num2=atoi(numero2);
+          Integer* t2=new Integer(num2);
+          Integer* temp = *t1+t2;
+          total=temp->getValue();
+          string str;
+          ostringstream tem;
+          tem<<total;
+          str=tem.str();
+          char const *pchar = str.c_str();
+          mvprintw(6, 10, "Total: ");
+          mvprintw(7, 10, pchar);
+          getch();
+        }else if (opcion[0]=='2'){//resta
+          cleanScreen();
+          int num1,num2,total;
+          mvprintw(4, 10, "Ingrese numero 1: ");
+          char numero1[9];
+          getstr(numero1);
+          num1=atoi(numero1);
+          Integer* t1=new Integer(num1);
+          mvprintw(5, 10, "Ingrese numero 2: ");
+          char numero2[9];
+          getstr(numero2);
+          num2=atoi(numero2);
+          Integer* t2=new Integer(num2);
+          Integer* temp = *t1-t2;
+          total=temp->getValue();
+          string str;
+          ostringstream tem;
+          tem<<total;
+          str=tem.str();
+          char const *pchar = str.c_str();
+          mvprintw(6, 10, "Total: ");
+          mvprintw(7, 10, pchar);
+          getch();
+
+        }else if (opcion[0]=='3'){
+          cleanScreen();
+          salir=true;
+          mvprintw(5,20,"Gracias por entrar");
+          getch();
+        }
+        else{
+          cleanScreen();
+          mvprintw(5,20,"Opcion no valida, intente de nuevo...");
+          getch();
+        }
+        cleanScreen();
+      }
+    }
+    else if (opcion[0]=='4'){//salir
       cleanScreen();
-      libre=true;
       mvprintw(5,20,"Gracias por entrar al sistema");
+      libre=true;
+
     }//fin salir
     else{
       //cleanScreen();
