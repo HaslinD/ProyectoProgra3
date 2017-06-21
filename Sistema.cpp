@@ -919,6 +919,7 @@ void Sistema::run(){
         }
       }//fin Administrador
       if (tipo==2){//Vendedor
+        cleanScreen();
         bool val = false;
         mvprintw(2, 10, "HA INGRESADO COMO VENDEDOR ");
         mvprintw(4, 10, "Que Desea Hacer? ");
@@ -930,6 +931,7 @@ void Sistema::run(){
         getstr(opcion);
         getch();
         if (opcion[0] == '1') {//Venta de Objetos
+          cleanScreen();
           mvprintw(6,20,"Ingrese lugar de Compra: ");
           char lug[9];
           getstr(lug);
@@ -938,10 +940,6 @@ void Sistema::run(){
           char fech[9];
           getstr(fech);
           string fecha = static_cast<char*>(fech);
-          mvprintw(8,20,"Ingrese Numero Local: ");
-          char nloc[9];
-          getstr(nloc);
-          string nlocal = static_cast<char*>(nloc);
           mvprintw(9,20,"Ingrese Nombre del Comprador: ");
           char nom[9];
           getstr(nom);
@@ -958,12 +956,14 @@ void Sistema::run(){
           facturas.push_back(ventatodo);
           int vnta;
           do {
-            mvprintw(6,20,"Ingrese Que desea Comprar: ");
+            cleanScreen();
+            mvprintw(6,20,"Que desea Comprar: ");
             char vent[9];
+            getstr(vent);
             vnta = atoi(vent);
-          
             compra.push_back(productos.at(vnta));
           } while (vnta > 0 && vnta < productos.size());
+          cleanScreen();
 
         } else if (opcion[1] == '2') {// Facturacion
           Venta* ventatodo;
