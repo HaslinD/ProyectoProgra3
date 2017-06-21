@@ -6,7 +6,7 @@ Verduras :: Verduras() {
 
 }
 
-Verduras :: Verduras(string name, string precioVerdura, string cantidad) {
+Verduras :: Verduras(string name, string precioVerdura, string cantidad):Productos() {
 	this -> name = name;
 	this -> precioVerdura = precioVerdura;
 	this -> cantidad = cantidad;

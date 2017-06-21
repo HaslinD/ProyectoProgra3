@@ -23,6 +23,19 @@
 #include "Manzana.h"
 #include "Cono.h"
 #include "Sundae.h"
+#include "Martillo.h"
+#include "Lego.h"
+#include "Puzzle.h"
+#include "Ron.h"
+#include "Tequila.h"
+#include "Ase.h"
+#include "Cloro.h"
+#include "Camaron.h"
+#include "Pez.h"
+#include "Semita.h"
+#include "Galletas.h"
+#include "Tomate.h"
+#include "Pepino.h"
 //#include "Productos.h"
 
 
@@ -210,7 +223,7 @@ void Sistema::run(){
                     string codigo = static_cast<char*>(cod);
                     Productos* bedi=new CocaCola(codigo,precio,"CocaCola");
                     productos.push_back(bedi);
-                    mvprintw(6,20,"Se ha agregado correctamente: ");
+                    mvprintw(10,20,"Se ha agregado correctamente: ");
                   }
                   else if (op[0]=='2'){//pepsi
                     cleanScreen();
@@ -224,7 +237,7 @@ void Sistema::run(){
                     string codigo = static_cast<char*>(cod);
                     Productos* bedi=new Pepsi(codigo,precio,"Pepsi");
                     productos.push_back(bedi);
-                    mvprintw(6,20,"Se ha agregado correctamente: ");
+                    mvprintw(10,20,"Se ha agregado correctamente: ");
                   }
                   else if (op[0]=='3'){//salir
                     cleanScreen();
@@ -262,7 +275,7 @@ void Sistema::run(){
                     string codigo = static_cast<char*>(cod);
                     Productos* carne=new Cerdo(codigo,precio,"Cerdo");
                     productos.push_back(carne);
-                    mvprintw(6,20,"Se ha agregado correctamente: ");
+                    mvprintw(10,20,"Se ha agregado correctamente: ");
                   }
                   else if (op[0]=='2'){//res
                     cleanScreen();
@@ -276,7 +289,7 @@ void Sistema::run(){
                     string codigo = static_cast<char*>(cod);
                     Productos* carne=new Res(codigo,precio,"Res");
                     productos.push_back(carne);
-                    mvprintw(6,20,"Se ha agregado correctamente: ");
+                    mvprintw(10,20,"Se ha agregado correctamente: ");
                   }
                   else if (op[0]=='3'){//salir
                     cleanScreen();
@@ -314,7 +327,7 @@ void Sistema::run(){
                     string codigo = static_cast<char*>(cod);
                     Productos* fruta=new Pera(codigo,precio,"Pera");
                     productos.push_back(fruta);
-                    mvprintw(6,20,"Se ha agregado correctamente: ");
+                    mvprintw(10,20,"Se ha agregado correctamente: ");
                   }
                   else if (op[0]=='2'){//manzana
                     cleanScreen();
@@ -328,7 +341,7 @@ void Sistema::run(){
                     string codigo = static_cast<char*>(cod);
                     Productos* fruta=new Manzana(codigo,precio,"Manzana");
                     productos.push_back(fruta);
-                    mvprintw(6,20,"Se ha agregado correctamente: ");
+                    mvprintw(10,20,"Se ha agregado correctamente: ");
                   }
                   else if (op[0]=='3'){//salir
                     cleanScreen();
@@ -367,7 +380,7 @@ void Sistema::run(){
                     string codigo = static_cast<char*>(cod);
                     Productos* helado=new Cono(codigo,precio,"Cono");
                     productos.push_back(helado);
-                    mvprintw(6,20,"Se ha agregado correctamente: ");
+                    mvprintw(10,20,"Se ha agregado correctamente: ");
                   }
                   else if (op[0]=='2'){//Sundae
                     cleanScreen();
@@ -381,7 +394,7 @@ void Sistema::run(){
                     string codigo = static_cast<char*>(cod);
                     Productos* helado=new Sundae(codigo,precio,"Sundae");
                     productos.push_back(helado);
-                    mvprintw(6,20,"Se ha agregado correctamente: ");
+                    mvprintw(10,20,"Se ha agregado correctamente: ");
                   }
                   else if (op[0]=='3'){//salir
                     cleanScreen();
@@ -398,24 +411,469 @@ void Sistema::run(){
 
               }
               else if(res=="5"){//Herramientas
+                cleanScreen();
+                bool libre=false;
+                while(!libre){
+                  mvprintw(5,20,"Cual desea agregar: ");
+                  mvprintw(6,20,"[1]. Martillo");
+                  mvprintw(7,20,"[2]. Pala");
+                  mvprintw(8,20,"[3]. Salir");
+                  mvprintw(9,20,"Ingrese Opcion: ");
+                  char op[1];
+                  getstr(op);
+                  if (op[0]=='1'){//Martillo
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    Productos* herra=new Martillo(codigo,"Martilo",precio);
+                    productos.push_back(herra);
+                    mvprintw(10,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='2'){//Pala
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese Precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese Código: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    Productos* helado=new Sundae(codigo,precio,"Sundae");
+                    productos.push_back(helado);
+                    mvprintw(10,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='3'){//salir
+                    cleanScreen();
+                    libre=true;
+                  }else{
+                    cleanScreen();
+                    mvprintw(5,20,"Opcion no valida, intente de nuevo...");
+                    getch();
+                  }
+                  cleanScreen();
+                }
 
+                getch();
               }
               else if(res=="6"){//Jugueteria
+                cleanScreen();
+                bool libre=false;
+                while(!libre){
+                  mvprintw(5,20,"Cual desea agregar: ");
+                  mvprintw(6,20,"[1]. Lego");
+                  mvprintw(7,20,"[2]. Puzzle");
+                  mvprintw(8,20,"[3]. Salir");
+                  mvprintw(9,20,"Ingrese Opcion: ");
+                  char op[1];
+                  getstr(op);
+                  if (op[0]=='1'){//Lego
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    Productos* juguete=new Lego(codigo,"LEGO","LEGO",precio,"LEGO");
+                    productos.push_back(juguete);
+                    mvprintw(10,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='2'){//Puzzle
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese Precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese Código: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    Productos* juguete=new Puzzle(codigo,"Puzzle","PUZZLE",precio,"PUZZLE");
+                    productos.push_back(juguete);
+                    mvprintw(10,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='3'){//salir
+                    cleanScreen();
+                    libre=true;
+                  }else{
+                    cleanScreen();
+                    mvprintw(5,20,"Opcion no valida, intente de nuevo...");
+                    getch();
+                  }
+                  cleanScreen();
+                }
 
+                getch();
               }
               else if (res=="7"){//Licores
+                cleanScreen();
+                bool libre=false;
+                while(!libre){
+                  mvprintw(5,20,"Cual desea agregar: ");
+                  mvprintw(6,20,"[1]. Ron");
+                  mvprintw(7,20,"[2]. Tequila");
+                  mvprintw(8,20,"[3]. Salir");
+                  mvprintw(9,20,"Ingrese Opcion: ");
+                  char op[1];
+                  getstr(op);
+                  if (op[0]=='1'){//ron
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    mvprintw(8,20,"Ingrese Nombre del Ron: ");
+                    char ron[9];
+                    getstr(ron);
+                    string name = static_cast<char*>(ron);
+                    mvprintw(9,20,"Ingrese Marca del Ron: ");
+                    char mar[9];
+                    getstr(mar);
+                    string marca = static_cast<char*>(mar);
+
+                    mvprintw(10,20,"Ingrese cantidadML del Ron: ");
+                    char cant[9];
+                    getstr(cant);
+                    string cantidad = static_cast<char*>(cant);
+                    Productos* licor=new Ron(codigo,name,marca,precio,cantidad);
+                    productos.push_back(licor);
+                    mvprintw(12,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='2'){//Tequila
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    mvprintw(8,20,"Ingrese Nombre del Ron: ");
+                    char ron[9];
+                    getstr(ron);
+                    string name = static_cast<char*>(ron);
+                    mvprintw(9,20,"Ingrese Marca del Ron: ");
+                    char mar[9];
+                    getstr(mar);
+                    string marca = static_cast<char*>(mar);
+
+                    mvprintw(10,20,"Ingrese cantidadML del Ron: ");
+                    char cant[9];
+                    getstr(cant);
+                    string cantidad = static_cast<char*>(cant);
+                    Productos* licor=new Tequila(codigo,name,marca,precio,cantidad);
+                    productos.push_back(licor);
+                    mvprintw(12,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='3'){//salir
+                    cleanScreen();
+                    libre=true;
+                  }else{
+                    cleanScreen();
+                    mvprintw(5,20,"Opcion no valida, intente de nuevo...");
+                    getch();
+                  }
+                  cleanScreen();
+                }
+
+                getch();
 
               }
               else if (res=="8"){//Limpieza
+                cleanScreen();
+                bool libre=false;
+                while(!libre){
+                  mvprintw(5,20,"Cual desea agregar: ");
+                  mvprintw(6,20,"[1]. Ase");
+                  mvprintw(7,20,"[2]. Cloro");
+                  mvprintw(8,20,"[3]. Salir");
+                  mvprintw(9,20,"Ingrese Opcion: ");
+                  char op[1];
+                  getstr(op);
+                  if (op[0]=='1'){//Ase
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    mvprintw(8,20,"Ingrese tipo: ");
+                    char tip[9];
+                    getstr(tip);
+                    string tipo = static_cast<char*>(tip);
+                    Productos* limpio=new Ase(codigo,precio,tipo);
+                    productos.push_back(limpio);
+                    mvprintw(10,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='2'){//Cloro
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    mvprintw(8,20,"Ingrese tipo: ");
+                    char tip[9];
+                    getstr(tip);
+                    string tipo = static_cast<char*>(tip);
+                    Productos* limpio=new Cloro(codigo,precio,tipo);
+                    productos.push_back(limpio);
+                    mvprintw(10,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='3'){//salir
+                    cleanScreen();
+                    libre=true;
+                  }else{
+                    cleanScreen();
+                    mvprintw(5,20,"Opcion no valida, intente de nuevo...");
+                    getch();
+                  }
+                  cleanScreen();
+                }
+
+                getch();
 
               }
               else if(res=="9"){//Mariscos
+                cleanScreen();
+                bool libre=false;
+                while(!libre){
+                  mvprintw(5,20,"Cual desea agregar: ");
+                  mvprintw(6,20,"[1]. Camaron");
+                  mvprintw(7,20,"[2]. Pez");
+                  mvprintw(8,20,"[3]. Salir");
+                  mvprintw(9,20,"Ingrese Opcion: ");
+                  char op[1];
+                  getstr(op);
+                  if (op[0]=='1'){//Camaron
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    mvprintw(8,20,"Ingrese Nombre: ");
+                    char nome[9];
+                    getstr(nome);
+                    string name = static_cast<char*>(nome);
+                    mvprintw(9,20,"Ingrese Peso: ");
+                    char pes[9];
+                    getstr(pes);
+                    string peso = static_cast<char*>(pes);
+                    Productos* mari=new Camaron(codigo,name,precio,peso);
+                    productos.push_back(mari);
+                    mvprintw(12,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='2'){//Pez
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    mvprintw(8,20,"Ingrese Nombre: ");
+                    char nome[9];
+                    getstr(nome);
+                    string name = static_cast<char*>(nome);
+                    mvprintw(9,20,"Ingrese Peso: ");
+                    char pes[9];
+                    getstr(pes);
+                    string peso = static_cast<char*>(pes);
+                    Productos* mari=new Pez(codigo,name,precio,peso);
+                    productos.push_back(mari);
+                    mvprintw(12,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='3'){//salir
+                    cleanScreen();
+                    libre=true;
+                  }else{
+                    cleanScreen();
+                    mvprintw(5,20,"Opcion no valida, intente de nuevo...");
+                    getch();
+                  }
+                  cleanScreen();
+                }
 
+                getch();
               }
               else if (res=="10"){//pan
+                cleanScreen();
+                bool libre=false;
+                while(!libre){
+                  mvprintw(5,20,"Cual desea agregar: ");
+                  mvprintw(6,20,"[1]. Semita");
+                  mvprintw(7,20,"[2]. Galletas");
+                  mvprintw(8,20,"[3]. Salir");
+                  mvprintw(9,20,"Ingrese Opcion: ");
+                  char op[1];
+                  getstr(op);
+                  if (op[0]=='1'){//Semita
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    mvprintw(8,20,"Ingrese Nombre: ");
+                    char nome[9];
+                    getstr(nome);
+                    string name = static_cast<char*>(nome);
+                    mvprintw(9,20,"Ingrese estado: ");
+                    char es[9];
+                    getstr(es);
+                    string estado = static_cast<char*>(es);
+                    mvprintw(10,20,"Ingrese tipo: ");
+                    char tip[9];
+                    getstr(tip);
+                    string tipo = static_cast<char*>(tip);
+                    mvprintw(11,20,"Ingrese fecha de Vencimiento: ");
+                    char date[12];
+                    getstr(date);
+                    string fecha = static_cast<char*>(date);
+                    Productos* pan=new Semita(codigo,name,estado,precio,tipo,fecha);
+                    productos.push_back(pan);
+                    mvprintw(13,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='2'){//Galletas
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    mvprintw(8,20,"Ingrese Nombre: ");
+                    char nome[9];
+                    getstr(nome);
+                    string name = static_cast<char*>(nome);
+                    mvprintw(9,20,"Ingrese estado: ");
+                    char es[9];
+                    getstr(es);
+                    string estado = static_cast<char*>(es);
+                    mvprintw(10,20,"Ingrese tipo: ");
+                    char tip[9];
+                    getstr(tip);
+                    string tipo = static_cast<char*>(tip);
+                    mvprintw(11,20,"Ingrese fecha de Vencimiento: ");
+                    char date[12];
+                    getstr(date);
+                    string fecha = static_cast<char*>(date);
+                    Productos* pan=new Galletas(codigo,name,estado,precio,tipo,fecha);
+                    productos.push_back(pan);
+                    mvprintw(13,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='3'){//salir
+                    cleanScreen();
+                    libre=true;
+                  }else{
+                    cleanScreen();
+                    mvprintw(5,20,"Opcion no valida, intente de nuevo...");
+                    getch();
+                  }
+                  cleanScreen();
+                }
+
+                getch();
 
               }
               else if(res=="11"){//verduras
+                cleanScreen();
+                bool libre=false;
+                while(!libre){
+                  mvprintw(5,20,"Cual desea agregar: ");
+                  mvprintw(6,20,"[1]. Tomate");
+                  mvprintw(7,20,"[2]. Pepino");
+                  mvprintw(8,20,"[3]. Salir");
+                  mvprintw(9,20,"Ingrese Opcion: ");
+                  char op[1];
+                  getstr(op);
+                  if (op[0]=='1'){//Tomate
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    mvprintw(8,20,"Ingrese Nombre: ");
+                    char nome[9];
+                    getstr(nome);
+                    string name = static_cast<char*>(nome);
+                    mvprintw(9,20,"Ingrese cantidad: ");
+                    char pes[9];
+                    getstr(pes);
+                    string cantidad = static_cast<char*>(pes);
+                    Productos* verdura=new Tomate(codigo,name,precio,cantidad);
+                    productos.push_back(verdura);
+                    mvprintw(12,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='2'){//Pepino
+                    cleanScreen();
+                    mvprintw(6,20,"Ingrese precio: ");
+                    char price[9];
+                    getstr(price);
+                    string precio = static_cast<char*>(price);
+                    mvprintw(7,20,"Ingrese codigo: ");
+                    char cod[9];
+                    getstr(cod);
+                    string codigo = static_cast<char*>(cod);
+                    mvprintw(8,20,"Ingrese Nombre: ");
+                    char nome[9];
+                    getstr(nome);
+                    string name = static_cast<char*>(nome);
+                    mvprintw(9,20,"Ingrese cantidad: ");
+                    char pes[9];
+                    getstr(pes);
+                    string cantidad = static_cast<char*>(pes);
+                    Productos* verdura=new Pepino(codigo,name,precio,cantidad);
+                    productos.push_back(verdura);
+                    mvprintw(12,20,"Se ha agregado correctamente: ");
+                  }
+                  else if (op[0]=='3'){//salir
+                    cleanScreen();
+                    libre=true;
+                  }else{
+                    cleanScreen();
+                    mvprintw(5,20,"Opcion no valida, intente de nuevo...");
+                    getch();
+                  }
+                  cleanScreen();
+                }
+
+                getch();
 
               }
               else if (res=="12"){
