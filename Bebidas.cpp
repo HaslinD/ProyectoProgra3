@@ -6,7 +6,8 @@ Bebidas::Bebidas(string precio,string sabor):Productos(){
 }
 Bebidas::Bebidas(){
 
-}void Bebidas::setPrecio(string precio){
+}
+void Bebidas::setPrecio(string precio){
    this-> precio=precio;
 }
 string Bebidas::getPrecio(){

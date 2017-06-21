@@ -37,9 +37,11 @@
 #include "Tomate.h"
 #include "Pepino.h"
 #include "Integer.h"
+#include "Venta.h"
 #include <iostream>
 #include <stdlib.h>
 #include <typeinfo>
+#include <fstream>
 #include <sstream>
 //#include "Productos.h"
 
@@ -60,6 +62,7 @@ void Sistema::run(){
   usuarios.push_back(user);*/
   bool libre=false;
   archivo1.open("Usuario.txt",ios::app);
+
   while(!libre){
     mvprintw(4, 20, "BIENVENIDO AL SISTEMA");
     mvprintw(5, 10, "[1]. Registrarse");
@@ -100,7 +103,7 @@ void Sistema::run(){
           usuarios.push_back(admin);
           mvprintw(10, 10, "Se registró correctamente");
           getch();
-          archivo1<<"Usuario: "<<usuario<< " Contraseña: "<<contrasena;
+          archivo1<<"Usuario: "<<usuario<< " Contraseña: "<<contrasena<<endl;
         }else if (opcion[0]=='2'){//sign up Vendedor
           cleanScreen();
           mvprintw(5, 10, "Ingrese su Id: ");
@@ -123,7 +126,7 @@ void Sistema::run(){
           usuarios.push_back(vendedor);
           mvprintw(10, 10, "Se registró correctamente");
           getch();
-          archivo1<<"Usuario: "<<usuario<< " Contraseña: "<<contrasena;
+          archivo1<<"Usuario: "<<usuario<< " Contraseña: "<<contrasena<<endl;
         }else if (opcion[0]=='3'){
           cleanScreen();
           libre=true;
@@ -168,7 +171,7 @@ void Sistema::run(){
           mvprintw(5, 10, "Usuario y Contraseña Incorrectos");
           getch();
         }
-        break;
+        //break;
       }
       if (tipo==1){//Administrador
         bool salir=false;
@@ -892,6 +895,7 @@ void Sistema::run(){
               cleanScreen();
             }
           }//fin agregar
+
           else if(opcion[0]=='2'){//eliminar
               cleanScreen();
               mvprintw(5,20,"Ingrese la posicion del vector que desea eliminar: ");
@@ -916,8 +920,80 @@ void Sistema::run(){
       }//fin Administrador
       if (tipo==2){//Vendedor
         cleanScreen();
-        mvprintw(20,15,"Entro Vendedor");
+        bool val = false;
+        mvprintw(2, 10, "HA INGRESADO COMO VENDEDOR ");
+        mvprintw(4, 10, "Que Desea Hacer? ");
+        mvprintw(5, 10, "[1]. Vender");
+        mvprintw(6, 10, "[2]. Hacer Una Factura");
+        mvprintw(7, 10, "[3]. Salir");
+        mvprintw(8, 10, "ELIGA LA OPCION: ");
+        char opcion[1];
+        getstr(opcion);
         getch();
+        if (opcion[0] == '1') {//Venta de Objetos
+          cleanScreen();
+          mvprintw(6,20,"Ingrese lugar de Compra: ");
+          char lug[9];
+          getstr(lug);
+          string lugar = static_cast<char*>(lug);
+          mvprintw(7,20,"Ingrese Fecha de Compra: ");
+          char fech[9];
+          getstr(fech);
+          string fecha = static_cast<char*>(fech);
+          mvprintw(9,20,"Ingrese Nombre del Comprador: ");
+          char nom[9];
+          getstr(nom);
+          string nombre = static_cast<char*>(nom);
+          mvprintw(10,20,"Ingrese Identidad del Comprador: ");
+          char id[9];
+          getstr(id);
+          string identificacion = static_cast<char*>(id);
+          mvprintw(11,20,"Ingrese Domicilio: ");
+          char dom[9];
+          getstr(dom);
+          string domicilio = static_cast<char*>(dom);
+          Factura* ventatodo=new Venta(lugar, fecha, "23", nombre, identificacion, domicilio);
+          facturas.push_back(ventatodo);
+          int vnta;
+          do {
+            cleanScreen();
+            mvprintw(6,20,"Que desea Comprar: ");
+            char vent[9];
+            getstr(vent);
+            vnta = atoi(vent);
+            compra.push_back(productos.at(vnta));
+          } while (vnta > 0 && vnta < productos.size());
+          cleanScreen();
+
+        } else if (opcion[1] == '2') {// Facturacion
+          Venta* ventatodo;
+          Fact.open("Factura.txt", ios::app);
+
+          Fact << ventatodo -> Lugar() << endl;
+          Fact << ventatodo -> Fecha() << endl;
+          Fact << ventatodo -> Nombreapellido() << endl;
+          Fact << ventatodo -> Numidentificacion() << endl;
+          Fact << ventatodo -> Domicilio() << endl;
+          Fact << "# " << "   Nombre   " << "   Precio  " << endl;
+          for (int i = 0; i < compra.size(); ++i) {
+            Fact << i << compra.at(i) << endl;
+          }
+          Fact << "Gracias Por Su Compra" << endl;
+
+        } else if (opcion[2] == '3') {
+          cleanScreen();
+            val=true;
+            mvprintw(5,20,"Gracias por entrar al sistema Vendedor");
+            getch();
+          } else{
+            cleanScreen();
+            mvprintw(5,20,"Opcion no valida, intente de nuevo...");
+            getch();
+        }
+
+        cleanScreen();
+        //mvprintw(20,15,"Entro Vendedor");
+        //getch();
       }//fin Vendedor
     }//fin login in
     else if (opcion[0]=='3'){//Calculadora

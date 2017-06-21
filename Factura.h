@@ -20,7 +20,7 @@ class Factura {
 
 		virtual string Lugar() = 0;
 		virtual string Fecha() = 0;
-		virtual string Numlocal() = 0;
+		//virtual string Numlocal() = 0;
 		virtual string Nombreapellido() = 0; 
 		virtual string Numidentificacion() = 0;
 		virtual string Domicilio() = 0;

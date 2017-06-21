@@ -6,7 +6,8 @@ Carnes::Carnes(string precio,string tipo):Productos(){
 }
 Carnes::Carnes(){
 
-}void Carnes::setPrecio(string precio){
+}
+void Carnes::setPrecio(string precio){
    this-> precio=precio;
 }
 string Carnes::getPrecio(){

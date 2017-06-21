@@ -19,14 +19,13 @@ class Venta : public Factura{
 		vector<string> getObjetos();
 		void setObjetos(vector<string> objetos);
 
-		void setObjects(string obj);
-
 		string Lugar();
 		string Fecha();
-		string NumLocal();
+		//string NumLocal();
 		string Nombreapellido();
 		string Numidentificacion();
 		string Domicilio();
+
 
 };
 #endif

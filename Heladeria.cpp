@@ -6,7 +6,8 @@ Heladeria::Heladeria(string precio,string tipo):Productos(){
 }
 Heladeria::Heladeria(){
 
-}void Heladeria::setPrecio(string precio){
+}
+void Heladeria::setPrecio(string precio){
    this-> precio=precio;
 }
 string Heladeria::getPrecio(){
