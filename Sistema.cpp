@@ -103,7 +103,7 @@ void Sistema::run(){
           usuarios.push_back(admin);
           mvprintw(10, 10, "Se registró correctamente");
           getch();
-          archivo1<<"Usuario: "<<usuario<< " Contraseña: "<<contrasena;
+          archivo1<<"Usuario: "<<usuario<< " Contraseña: "<<contrasena<<endl;
         }else if (opcion[0]=='2'){//sign up Vendedor
           cleanScreen();
           mvprintw(5, 10, "Ingrese su Id: ");
@@ -126,7 +126,7 @@ void Sistema::run(){
           usuarios.push_back(vendedor);
           mvprintw(10, 10, "Se registró correctamente");
           getch();
-          archivo1<<"Usuario: "<<usuario<< " Contraseña: "<<contrasena;
+          archivo1<<"Usuario: "<<usuario<< " Contraseña: "<<contrasena<<endl;
         }else if (opcion[0]=='3'){
           cleanScreen();
           libre=true;
@@ -156,7 +156,7 @@ void Sistema::run(){
       //string password=pass;
       getch();
       cleanScreen();
-      int tipo;
+      int tipo=0;
       for (int i = 0; i < usuarios.size(); i++) {
         if((usuario==usuarios[i]->getUser()) && (password==usuarios[i]->getPassword())){
           if (dynamic_cast<Administrador*>(usuarios[i])){//Administrador login
@@ -171,7 +171,7 @@ void Sistema::run(){
           mvprintw(5, 10, "Usuario y Contraseña Incorrectos");
           getch();
         }
-        break;
+        //break;
       }
       if (tipo==1){//Administrador
         bool salir=false;
@@ -968,13 +968,13 @@ void Sistema::run(){
         } else if (opcion[1] == '2') {// Facturacion
           Venta* ventatodo;
           Fact.open("Factura.txt", ios::app);
-          
-          Fact << ventatodo -> Lugar() << endl;   
+
+          Fact << ventatodo -> Lugar() << endl;
           Fact << ventatodo -> Fecha() << endl;
           Fact << ventatodo -> Nombreapellido() << endl;
           Fact << ventatodo -> Numidentificacion() << endl;
           Fact << ventatodo -> Domicilio() << endl;
-          Fact << "# " << "   Nombre   " << "   Precio  " << endl; 
+          Fact << "# " << "   Nombre   " << "   Precio  " << endl;
           for (int i = 0; i < compra.size(); ++i) {
             Fact << i << compra.at(i) << endl;
           }
