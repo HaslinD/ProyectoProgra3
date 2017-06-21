@@ -927,10 +927,11 @@ void Sistema::run(){
         mvprintw(6, 10, "[2]. Hacer Una Factura");
         mvprintw(7, 10, "[3]. Salir");
         mvprintw(8, 10, "ELIGA LA OPCION: ");
-        char opcion[1];
-        getstr(opcion);
+        char respuesta[1];
+        getstr(respuesta);
+        string res = static_cast<char*>(respuesta);
         getch();
-        if (opcion[0] == '1') {//Venta de Objetos
+        if (res == "1") {//Venta de Objetos
           cleanScreen();
           mvprintw(6,20,"Ingrese lugar de Compra: ");
           char lug[9];
@@ -957,7 +958,7 @@ void Sistema::run(){
           int vnta;
           do {
             cleanScreen();
-            mvprintw(6,20,"Que desea Comprar: ");
+            mvprintw(6,20,"Que desea Comprar [0] para salir: ");
             char vent[9];
             getstr(vent);
             vnta = atoi(vent);
@@ -965,7 +966,7 @@ void Sistema::run(){
           } while (vnta > 0 && vnta < productos.size());
           cleanScreen();
 
-        } else if (opcion[1] == '2') {// Facturacion
+        } else if (res == "2") {// Facturacion
           Venta* ventatodo;
           Fact.open("Factura.txt", ios::app);
 
@@ -974,13 +975,13 @@ void Sistema::run(){
           Fact << ventatodo -> Nombreapellido() << endl;
           Fact << ventatodo -> Numidentificacion() << endl;
           Fact << ventatodo -> Domicilio() << endl;
-          Fact << "# " << "   Nombre   " << "   Precio  " << endl;
-          for (int i = 0; i < compra.size(); ++i) {
+          //Fact << "# " << "   Nombre   " << "   Precio  " << endl;
+          /*for (int i = 0; i < compra.size(); ++i) {
             Fact << i << compra.at(i) << endl;
-          }
+          }*/
           Fact << "Gracias Por Su Compra" << endl;
 
-        } else if (opcion[2] == '3') {
+        } else if (res == "3") {
           cleanScreen();
             val=true;
             mvprintw(5,20,"Gracias por entrar al sistema Vendedor");
