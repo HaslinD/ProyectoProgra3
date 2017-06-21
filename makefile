@@ -1,5 +1,5 @@
-Main: Main.o Productos.o Bebidas.o Pepsi.o CocaCola.o Carnes.o Cerdo.o Res.o Frutas.o Pera.o Manzana.o Heladeria.o Cono.o Sundae.o Herramientas.o Martillo.o Pala.o Jugueteria.o Lego.o Puzzle.o Licores.o Ron.o Tequila.o Limpieza.o Ase.o Cloro.o Mariscos.o Pez.o Camaron.o Pan.o Galletas.o Semita.o Verduras.o Pepino.o Tomate.o Sistema.o Factura.o Pedido.o Venta.o Usuario.o Administrador.o Vendedor.o
-		g++ Main.o Productos.o Bebidas.o Pepsi.o CocaCola.o Carnes.o Cerdo.o Res.o Frutas.o Pera.o Manzana.o Heladeria.o Cono.o Sundae.o Herramientas.o Martillo.o Pala.o Jugueteria.o Lego.o Puzzle.o Licores.o Ron.o Tequila.o Limpieza.o Ase.o Cloro.o Mariscos.o Pez.o Camaron.o Pan.o Galletas.o Semita.o Verduras.o Pepino.o Tomate.o Sistema.o Factura.o Pedido.o Venta.o Usuario.o Administrador.o Vendedor.o -o Main -lncurses
+Main: Main.o Productos.o Bebidas.o Pepsi.o CocaCola.o Carnes.o Cerdo.o Res.o Frutas.o Pera.o Manzana.o Heladeria.o Cono.o Sundae.o Herramientas.o Martillo.o Pala.o Jugueteria.o Lego.o Puzzle.o Licores.o Ron.o Tequila.o Limpieza.o Ase.o Cloro.o Mariscos.o Pez.o Camaron.o Pan.o Galletas.o Semita.o Verduras.o Pepino.o Tomate.o Sistema.o Factura.o Pedido.o Venta.o Usuario.o Administrador.o Vendedor.o Integer.o
+		g++ Main.o Productos.o Bebidas.o Pepsi.o CocaCola.o Carnes.o Cerdo.o Res.o Frutas.o Pera.o Manzana.o Heladeria.o Cono.o Sundae.o Herramientas.o Martillo.o Pala.o Jugueteria.o Lego.o Puzzle.o Licores.o Ron.o Tequila.o Limpieza.o Ase.o Cloro.o Mariscos.o Pez.o Camaron.o Pan.o Galletas.o Semita.o Verduras.o Pepino.o Tomate.o Sistema.o Factura.o Pedido.o Venta.o Usuario.o Administrador.o Vendedor.o Integer.o -o Main -lncurses
 
 Main.o: Sistema.h Main.cpp
 	g++ -c Main.cpp
@@ -7,9 +7,12 @@ Main.o: Sistema.h Main.cpp
 Sistema.o: Sistema.h Usuario.h Productos.h Sistema.cpp Sistema.h Usuario.h Bebidas.h Carnes.h Frutas.h Heladeria.h Herramientas.h Jugueteria.h Licores.h Limpieza.h Mariscos.h Pan.h Verduras.h Administrador.h Vendedor.h Pepsi.h Productos.h CocaCola.h Cerdo.h Res.h Pera.h Manzana.h Cono.h Sundae.h Martillo.h Lego.h Puzzle.h Ron.h Tequila.h Ase.h Cloro.h Camaron.h Pez.h Semita.h Galletas.h Tomate.h Pepino.h
 	g++ -c Sistema.cpp
 
-Productos.o: Productos.h Productos.cpp;
+Productos.o: Productos.h Productos.cpp
 	g++ -c Productos.cpp
 
+Integer.o: Integer.h Integer.cpp
+	g++ -c Integer.cpp
+	
 Bebidas.o: Productos.h Bebidas.h Bebidas.cpp
 	g++ -c Bebidas.cpp
 
